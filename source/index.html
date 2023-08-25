@@ -4,60 +4,1042 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Описание проекта">
-    <title>ProjectName</title>
-    <link rel="stylesheet" href="css/style.min.css">
+    <meta name="description" content="Проект аккселератора" />
+    <title>Masa</title>
+    <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container"></div>
-      </header>
-      <main>
-        <section class="intro">
-          <div class="container">
-            <h1>Тестовая страница.</h1>
-            <p>На данной странице показан пример модальных окон.</p>
-            <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
+      <header class="header">
+        <div class="header__wrapper container">
+          <h1 class="visually-hidden">Программы стажировок Израиля</h1>
+          <a class="header__logo" href="index.html">
+            <svg width="52" height="52" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/sprite/sprite.svg#logo" />
+            </svg>
+          </a>
+          <div class="header__menu">
+            <div class="header__button">
+              <span>меню</span>
+              <button type="button"></button>
+            </div>
+            <div class="menu">
+              <div class="menu__item">
+                <a href="#">О проекте</a>
+              </div>
+              <div class="menu__item item-select">
+                <div class="item-select__wrapper">
+                  <a class="item-select__link" href="#">Программы</a>
+                  <span>
+                    <svg
+                      width="12"
+                      height="12"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <use xlink:href="img/sprite/sprite.svg#select-arrow" />
+                    </svg>
+                  </span>
+                </div>
+                <ul class="menu__list">
+                  <li class="menu__list-item">
+                    <a href="#">Стажировки</a>
+                  </li>
+                  <li class="menu__list-item">
+                    <a href="#">Волонтёрство</a>
+                  </li>
+                  <li class="menu__list-item">
+                    <a href="#">Учёба</a>
+                  </li>
+                  <li class="menu__list-item">
+                    <a href="#">Религия</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu__item">
+                <a href="#">как поехать</a>
+              </div>
+              <div class="menu__item"><a href="#">отзывы</a></div>
+              <div class="menu__item item-select">
+                <div class="item-select__wrap">
+                  <a class="item-select__link" href="#">новости</a>
+                  <span>
+                    <svg width="12" height="12">
+                      <use xlink:href="img/sprite/sprite.svg#select-arrow" />
+                    </svg>
+                  </span>
+                </div>
+                <ul class="menu__list">
+                  <li class="menu__list-item">
+                    <a href="#">Стажировки</a>
+                  </li>
+                  <li class="menu__list-item">
+                    <a href="#">Волонтёрство</a>
+                  </li>
+                  <li class="menu__list-item">
+                    <a href="#">Учёба</a>
+                  </li>
+                  <li class="menu__list-item">
+                    <a href="#">Религия</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu__item">
+                <a href="#">контакты</a>
+              </div>
+            </div>
           </div>
-        </section>
-      </main>
-      <footer>
-        <div class="container"></div>
+        </div>
+      </header>
+      <section class="hero swiper">
+        <div class="hero__container swiper-wrapper">
+          <div class="hero__slide swiper-slide hero__slide--internship">
+            <div class="hero__content container">
+              <div class="swiper-pagination"></div>
+              <h2>Программы стажировок в&nbsp;крупнейших компаниях Израиля</h2>
+              <div class="hero__descr">
+                <p>
+                  Получите незаменимый опыт работы в ведущих израильских
+                  компаниях и государственных организациях.
+                </p>
+                <a href="#" class="hero__btn btn">
+                  <span>подробнее</span>
+                  <span>
+                    <svg width="10" height="10">
+                      <use
+                        xlink:href="img/sprite/sprite.svg#button-arrow"
+                      ></use>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="hero__slide swiper-slide hero__slide--volunteering">
+            <div class="hero__content container">
+              <div class="swiper-pagination"></div>
+              <h2>Волонтёрские программы – внесите свой вклад в общество</h2>
+              <div class="hero__descr">
+                <p>
+                  Возможности для преподавания, органического сельского
+                  хозяйства, устойчивого образа жизни и другое.
+                </p>
+                <a href="#" class="hero__btn btn">
+                  <span>подробнее</span>
+                  <span>
+                    <svg width="10" height="10">
+                      <use
+                        xlink:href="img/sprite/sprite.svg#button-arrow"
+                      ></use>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="hero__slide swiper-slide hero__slide--exp">
+            <div class="hero__content container">
+              <div class="swiper-pagination"></div>
+              <h2>Глобальный профессиональный опыт обучения за рубежом</h2>
+              <div class="hero__descr">
+                <p>
+                  Погрузитесь в академическую программу, проходя практику в
+                  Тель-Авиве и ощущая настоящий израильский стиль жизни!
+                </p>
+                <a href="#" class="hero__btn btn">
+                  <span>подробнее</span>
+                  <span>
+                    <svg width="10" height="10">
+                      <use
+                        xlink:href="img/sprite/sprite.svg#button-arrow"
+                      ></use>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="about" class="about">
+        <div class="about__wrapper container">
+          <div class="about__container">
+            <div class="about__main">
+              <h2>О&nbsp;проекте &laquo;Маса&raquo;</h2>
+              <p>
+                &laquo;Маса&raquo; &mdash; совместный проект правительства
+                Израиля и&nbsp;Еврейского агентства Сохнут.
+              </p>
+            </div>
+            <div class="about__secondary">
+              <h3>Наша цель</h3>
+              <p>
+                Наша деятельность направлена на&nbsp;повышение квалификации
+                молодых специалистов на ранних и средних стадиях карьеры,
+                предоставляя им инструменты для решения сложных проблем,
+                с&nbsp;которыми сталкиваются Израиль и еврейские общины во всем
+                мире. Цель центра – наделить этих людей способностью
+                инициировать значимые изменения.
+              </p>
+              <button data-open-modal="question" class="about__btn btn">
+                <span>подробнее о проекте</span>
+                <span>
+                  <svg width="10" height="10">
+                    <use xlink:href="img/sprite/sprite.svg#button-arrow"></use>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+          <div class="about__info">
+            <div class="about__item">
+              <span>Более 250 программ</span>
+              <p>
+                учебных и&nbsp;рабочих,<br />
+                разной длительностью от&nbsp;3&nbsp;месяцев до&nbsp;1&nbsp;года
+              </p>
+            </div>
+            <div class="about__item">
+              <span>Более 3000 участников</span>
+              <p>
+                уже успешно прошли<br />
+                программу от&nbsp;&laquo;Маса&raquo; и&nbsp;остались
+                в&nbsp;Израиле
+              </p>
+            </div>
+            <div class="about__item">
+              <span>от&nbsp;4&nbsp;200&nbsp;$ до&nbsp;8&nbsp;400&nbsp;$</span>
+              <p>
+                грант всем участникам<br />
+                для комфортного прохождения программы
+              </p>
+            </div>
+            <div class="about__item">
+              <span>участники из&nbsp;60&nbsp;стран</span>
+              <p>
+                студенты со&nbsp;всего<br />
+                мира приезжают на&nbsp;программу &laquo;Маса&raquo;
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="programs" class="programs">
+        <div class="programs__wrapper container">
+          <div class="programs__title">
+            <h2>Программы</h2>
+            <a class="programs__btn btn" href="#">
+              <span>все программы</span>
+              <span>
+                <svg width="10" height="10">
+                  <use xlink:href="img/sprite/sprite.svg#button-arrow"></use>
+                </svg>
+              </span>
+            </a>
+          </div>
+          <div class="programs__slider swiper">
+            <div class="programs__container swiper-wrapper">
+              <div
+                class="programs__card swiper-slide programs__card--internship"
+              >
+                <div class="programs__inner-wrapper">
+                  <div class="programs__inner-main">
+                    <h3>Стажировки</h3>
+                  </div>
+                  <div class="programs__inner-descr">
+                    <p>
+                      Получите незаменимый опыт работы в крупнейших израильских
+                      компаниях.
+                    </p>
+                    <a class="programs__inner-btn" href="#">
+                      <svg width="10" height="10">
+                        <use
+                          xlink:href="img/sprite/sprite.svg#button-arrow"
+                        ></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="programs__card swiper-slide programs__card--volunteering"
+              >
+                <div class="programs__inner-wrapper">
+                  <div class="programs__inner-main">
+                    <h3>Волонтёрство</h3>
+                  </div>
+                  <div class="programs__inner-descr">
+                    <p>
+                      Помогайте другим и развивайте свои лидерские качества.
+                    </p>
+                    <a class="programs__inner-btn" href="#">
+                      <svg width="10" height="10">
+                        <use
+                          xlink:href="img/sprite/sprite.svg#button-arrow"
+                        ></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="programs__card swiper-slide programs__card--studies">
+                <div class="programs__inner-wrapper">
+                  <div class="programs__inner-main">
+                    <h3>Учёба</h3>
+                  </div>
+                  <div class="programs__inner-descr">
+                    <p>Получите образование и измените свое будущее.</p>
+                    <a class="programs__inner-btn" href="#">
+                      <svg width="10" height="10">
+                        <use
+                          xlink:href="img/sprite/sprite.svg#button-arrow"
+                        ></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="programs__card swiper-slide programs__card--studies">
+                <div class="programs__inner-wrapper">
+                  <div class="programs__inner-main">
+                    <h3>Учёба</h3>
+                  </div>
+                  <div class="programs__inner-descr">
+                    <p>Получите образование и измените свое будущее.</p>
+                    <a class="programs__inner-btn" href="#">
+                      <svg width="10" height="10">
+                        <use
+                          xlink:href="img/sprite/sprite.svg#button-arrow"
+                        ></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="programs__card swiper-slide programs__card--studies">
+                <div class="programs__inner-wrapper">
+                  <div class="programs__inner-main">
+                    <h3>Учёба</h3>
+                  </div>
+                  <div class="programs__inner-descr">
+                    <p>Получите образование и измените свое будущее.</p>
+                    <a class="programs__inner-btn" href="#">
+                      <svg width="10" height="10">
+                        <use
+                          xlink:href="img/sprite/sprite.svg#button-arrow"
+                        ></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="programs__buttons">
+            <div class="programs__line">
+              <span class="programs__inner-line"></span>
+            </div>
+            <button type="button" class="programs__btn-prev btn__prev">
+              <svg width="10" height="10">
+                <use xlink:href="img/sprite/sprite.svg#arrow-left"></use>
+              </svg>
+            </button>
+            <button type="button" class="programs__btn-next btn__next">
+              <svg width="10" height="10">
+                <use xlink:href="img/sprite/sprite.svg#arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section id="conditions" class="conditions">
+        <div class="conditions__wrapper container">
+          <div class="conditions__main">
+            <h2>Как поехать</h2>
+            <p>
+              Свяжитесь с координатором, чтобы узнать полную информацию. Вы
+              получите актуальные сведения о доступных программах
+              и&nbsp;городах, в которых можете пройти программу.
+            </p>
+            <picture>
+              <source
+                media="(max-width: 767px)"
+                srcset="
+                  img/content/img-waymark-tablet.webp,
+                  img/content/img-waymark-tablet@2x.webp 2x
+                "
+              />
+              <source
+                media="(max-width: 767px)"
+                srcset="
+                  img/content/img-waymark-tablet.jpg,
+                  img/content/img-waymark-tablet@2x.jpg 2x
+                "
+              />
+              <source
+                media="(max-width: 1199px)"
+                srcset="
+                  img/content/img-waymark-tablet.webp,
+                  img/content/img-waymark-tablet@2x.webp 2x
+                "
+              />
+              <source
+                media="(max-width: 1199px)"
+                srcset="
+                  img/content/img-waymark-tablet.jpg,
+                  img/content/img-waymark-tablet@2x.jpg 2x
+                "
+              />
+              <img
+                loading="lazy"
+                src="img/content/img-waymark.jpg"
+                srcset="img/content/img-waymark@2x.jpg 2x"
+                width="498"
+                height="363"
+                alt="Стажировки."
+              />
+            </picture>
+          </div>
+          <div class="conditions__info">
+            <h3>Чтобы получить грант на&nbsp;обучение, вам нужно:</h3>
+            <ul class="conditions__list">
+              <li>Быть в возрасте от 16 до 30 лет</li>
+              <li>Иметь оконченное среднее образование</li>
+              <li>
+                Иметь документально подтверждённые еврейские корни и пройти
+                консульскую проверку
+              </li>
+              <li>
+                За последние 2 года быть не&nbsp;больше 3х месяцев подряд
+                непрерывно в Израиле
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="news" class="news">
+        <div class="news__wrapper container">
+          <h2>Новости и материалы</h2>
+          <div class="news__tabs">
+            <button type="button" class="news__btn is-active" datt-tab="all">
+              общее
+            </button>
+            <button type="button" class="news__btn" datt-tab="volunteer">
+              Волонтёрство
+            </button>
+            <button type="button" class="news__btn" datt-tab="trainee">
+              Стажировки
+            </button>
+            <button type="button" class="news__btn" datt-tab="career">
+              карьера
+            </button>
+            <button type="button" class="news__btn" datt-tab="travel">
+              путешествия
+            </button>
+          </div>
+          <div class="news__slider swiper">
+            <div class="news__container swiper-wrapper"></div>
+            <div class="news__buttons">
+              <button type="button" class="news__btn-prev btn__prev">
+                <svg width="10" height="10">
+                  <use xlink:href="img/sprite/sprite.svg#arrow-left"></use>
+                </svg>
+              </button>
+              <div class="news__pagination swiper-pagination"></div>
+              <button type="button" class="news__btn-next btn__next">
+                <svg width="10" height="10">
+                  <use xlink:href="img/sprite/sprite.svg#arrow-right"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="questions">
+        <div class="questions__wrapper container">
+          <h2>Вопросы и ответы</h2>
+          <div class="questions__accordion accordion">
+            <div class="accordion__item">
+              <div data-acc="tab-1" class="accordion__header">
+                <span>Кто организатор? Какие сроки у программы?</span>
+              </div>
+              <div id="tab-1" class="accordion__content">
+                Организатором программы является проект “Маса” в сотрудничестве
+                с образовательными учреждениями. Сроки программы обмена могут
+                варьироваться от одного семестра до года.
+              </div>
+            </div>
+            <div class="accordion__item">
+              <div data-acc="tab-2" class="accordion__header">
+                <span>Что такое грант на&nbsp;обучение?</span>
+              </div>
+              <div id="tab-2" class="accordion__content">
+                Грант на обучение - это финансовая поддержка, которую
+                предоставляет организатор программы обмена студентами для оплаты
+                учебных расходов.
+              </div>
+            </div>
+            <div class="accordion__item">
+              <div data-acc="tab-3" class="accordion__header">
+                <span>Как определяется стоимость программы?</span>
+              </div>
+              <div id="tab-3" class="accordion__content">
+                Полная стоимость определяется организаторами в зависимости
+                от&nbsp;направления. В большинстве случаев грант «Маса» не
+                покрывает полную стоимость программы, и поэтому
+                предусматривается определённая доля личного участия.
+              </div>
+            </div>
+            <div class="accordion__item">
+              <div data-acc="tab-4" class="accordion__header">
+                <span
+                  >Признаётся ли учеба в&nbsp;рамках проекта
+                  для&nbsp;дальнейшего обучения?</span
+                >
+              </div>
+              <div id="tab-4" class="accordion__content">
+                Студенты, участвующие в проекте, могут использовать полученные
+                знания и навыки в своей будущей профессиональной деятельности
+                или продолжить обучение в высших учебных заведениях. Кроме того,
+                многие университеты и колледжи предоставляют кредиты за участие
+                в программе обмена студентами.
+              </div>
+            </div>
+            <div class="accordion__item">
+              <div data-acc="tab-5" class="accordion__header">
+                <span
+                  >Как выглядит полный процесс регистрации на&nbsp;программу
+                  «Маса»?</span
+                >
+              </div>
+              <div id="tab-5" class="accordion__content">
+                Процесс регистрации на программу обмена включает выбор
+                университета-партнера и программы обмена, общение с
+                координатором программы, заполнение заявления и предоставление
+                необходимых документов, прохождение интервью, оформление визы,
+                жилья и страховки, обучение по безопасности за границей и
+                подписание договора об участии в программе. Подробнее можно
+                узнать позвонив в центр.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="reviews" class="reviews">
+        <div class="reviews__wrapper container">
+          <h2>Отзывы</h2>
+          <div class="reviews__slider swiper">
+            <div class="reviews__container swiper-wrapper">
+              <div class="reviews__item swiper-slide">
+                <div class="reviews__profile">
+                  <div class="reviews__avatar">
+                    <picture>
+                      <source
+                        srcset="
+                          img/reviews/sarah.webp    1x,
+                          img/reviews/sarah@2x.webp 2x
+                        "
+                        type="image/webp"
+                      />
+                      <img
+                        loading="lazy"
+                        src="img/reviews/sarah.png"
+                        srcset="img/reviews/sarah@2x.png"
+                        alt="Аватар."
+                        width="90"
+                        height="90"
+                      />
+                    </picture>
+                    <p>Сара Аврахам</p>
+                  </div>
+                  <div class="reviews__info">
+                    <div>
+                      <span> программа </span>
+                      <p>Masa Art Challenge</p>
+                    </div>
+                    <div>
+                      <span> Дата </span>
+                      <p>Осень 2022</p>
+                    </div>
+                  </div>
+                </div>
+                <h4>
+                  Я могу с уверенностью сказать, что это был один из самых
+                  незабываемых опытов в жизни!
+                </h4>
+                <p>
+                  Я рекомендую программу «Маса» всем израильским студентам,
+                  желающим получить незабываемые впечатления. Сочетание
+                  путешествий, общения и значимой работы действительно отличает
+                  её от других программ, и&nbsp;я&nbsp;чувствую огромную
+                  благодарность за предоставленную мне возможность.
+                </p>
+              </div>
+              <div class="reviews__item swiper-slide">
+                <div class="reviews__profile">
+                  <div class="reviews__avatar">
+                    <picture>
+                      <source
+                        srcset="
+                          img/reviews/david.webp    1x,
+                          img/reviews/david@2x.webp 2x
+                        "
+                        type="image/webp"
+                      />
+                      <img
+                        loading="lazy"
+                        src="img/reviews/david.png"
+                        srcset="img/reviews/david@2x.png"
+                        alt="Аватар."
+                        width="90"
+                        height="90"
+                      />
+                    </picture>
+                    <p>Давид Иммервар</p>
+                  </div>
+                  <div class="reviews__info">
+                    <div>
+                      <span> программа </span>
+                      <p>Volunteer Chance</p>
+                    </div>
+                    <div>
+                      <span> Дата </span>
+                      <p>Лето 2022</p>
+                    </div>
+                  </div>
+                </div>
+                <h4>
+                  Благодаря опыту стажировки я узнал так много нового о себе и
+                  об окружающем мире.
+                </h4>
+                <p>
+                  Каждый день был возможностью оказать ощутимое влияние на жизнь
+                  других людей. Я бы очень рекомендовал эту волонтерскую
+                  программу всем, кто ищет значимый и незабываемый опыт.
+                  Организация была на высшем уровне. Для меня было честью быть
+                  частью такой удивительной инициативы.
+                </p>
+              </div>
+              <div class="reviews__item swiper-slide">
+                <div class="reviews__profile">
+                  <div class="reviews__avatar">
+                    <picture>
+                      <source
+                        srcset="
+                          img/reviews/sarah.webp    1x,
+                          img/reviews/sarah@2x.webp 2x
+                        "
+                        type="image/webp"
+                      />
+                      <img
+                        loading="lazy"
+                        src="img/reviews/sarah.png"
+                        srcset="img/reviews/sarah@2x.png"
+                        alt="Аватар."
+                        width="90"
+                        height="90"
+                      />
+                    </picture>
+                    <p>Сара Аврахам</p>
+                  </div>
+                  <div class="reviews__info">
+                    <div>
+                      <span> программа </span>
+                      <p>Masa Art Challenge</p>
+                    </div>
+                    <div>
+                      <span> Дата </span>
+                      <p>Осень 2022</p>
+                    </div>
+                  </div>
+                </div>
+                <h4>
+                  Я могу с уверенностью сказать, что это был один из самых
+                  незабываемых опытов в жизни!
+                </h4>
+                <p>
+                  Я рекомендую программу «Маса» всем израильским студентам,
+                  желающим получить незабываемые впечатления. Сочетание
+                  путешествий, общения и значимой работы действительно отличает
+                  её от других программ, и&nbsp;я&nbsp;чувствую огромную
+                  благодарность за предоставленную мне возможность.
+                </p>
+              </div>
+              <div class="reviews__item swiper-slide">
+                <div class="reviews__profile">
+                  <div class="reviews__avatar">
+                    <picture>
+                      <source
+                        srcset="
+                          img/reviews/david.webp    1x,
+                          img/reviews/david@2x.webp 2x
+                        "
+                        type="image/webp"
+                      />
+                      <img
+                        loading="lazy"
+                        src="img/reviews/david.png"
+                        srcset="img/reviews/david@2x.png"
+                        alt="Аватар."
+                        width="90"
+                        height="90"
+                      />
+                    </picture>
+                    <p>Давид Иммервар</p>
+                  </div>
+                  <div class="reviews__info">
+                    <div>
+                      <span> программа </span>
+                      <p>Volunteer Chance</p>
+                    </div>
+                    <div>
+                      <span> Дата </span>
+                      <p>Лето 2022</p>
+                    </div>
+                  </div>
+                </div>
+                <h4>
+                  Благодаря опыту стажировки я узнал так много нового о себе и
+                  об окружающем мире.
+                </h4>
+                <p>
+                  Каждый день был возможностью оказать ощутимое влияние на жизнь
+                  других людей. Я бы очень рекомендовал эту волонтерскую
+                  программу всем, кто ищет значимый и незабываемый опыт.
+                  Организация была на высшем уровне. Для меня было честью быть
+                  частью такой удивительной инициативы.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="reviews__buttons">
+            <div class="reviews__line">
+              <span class="reviews__inner-line"></span>
+            </div>
+            <button type="button" class="reviews__btn-prev btn__prev">
+              <svg width="10" height="10">
+                <use xlink:href="img/sprite/sprite.svg#arrow-left"></use>
+              </svg>
+            </button>
+            <button type="button" class="reviews__btn-next btn__next">
+              <svg width="10" height="10">
+                <use xlink:href="img/sprite/sprite.svg#arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section id="contacts" class="contacts">
+        <div class="contacts__wrapper container">
+          <div class="contacts__header">
+            <h2>Контакты</h2>
+            <ul class="contacts__list">
+              <li>
+                <span>центральный офис</span>
+                <p>
+                  г. Новосибирск, ул. Щетинкина 68,<br />
+                  культурный центр «Бейт Менахем»
+                </p>
+              </li>
+              <li>
+                <span>Телефон</span>
+                <a href="tel:+796387687676">+7 963 876 876 76</a>
+              </li>
+              <li>
+                <span>E-mail</span>
+                <a href="mailto:info@masa.ru">Info@masa.ru</a>
+              </li>
+            </ul>
+          </div>
+          <div class="contacts__map-wrap" id="map"></div>
+        </div>
+      </section>
+
+      <section class="form">
+        <div class="form__wrapper container">
+          <div class="form__container">
+            <picture>
+              <source
+                srcset="
+                  img/content/img-beach.webp        1x,
+                  img/backgrounds/img-beach@2x.webp 2x
+                "
+                type="image/webp"
+              />
+              <img
+                loading="lazy"
+                src="img/content/img-beach.jpg"
+                srcset="img/content/img-beach@2x.jpg 2x"
+                alt="Фон."
+                width="1240"
+                height="803"
+              />
+            </picture>
+            <div class="form__content">
+              <h3>Напишите нам</h3>
+              <p>
+                Оставьте ваши контакты, если у вас остались вопросы&nbsp;– мы на
+                них ответим!
+              </p>
+              <form action="#" method="post">
+                <fieldset class="form__fieldset">
+                  <label class="form__field">
+                    <span> Имя </span>
+                    <input type="text" name="name" autocomplete="off" />
+                  </label>
+                  <label class="form__field">
+                    <span> Телефон </span>
+                    <input type="text" name="name" autocomplete="off" />
+                  </label>
+                  <label class="form__field">
+                    <span> Ваше сообщение </span>
+                    <textarea name="message" id="form-message"></textarea>
+                  </label>
+                  <div class="form__sity">
+                    <span>Выберите город</span>
+                    <div class="form__sity-wrap">
+                      <div class="form__sity-dropdown dropdown">
+                        <div class="dropdown__text-wrap">
+                          <span class="dropdown__text"></span>
+                          <button type="button" class="dropdown__btn"></button>
+                        </div>
+                        <ul class="dropdown__list" tabindex="1">
+                          <li
+                            class="dropdown__item"
+                            data-value="Санкт-Петербург"
+                          >
+                            Санкт-Петербург
+                          </li>
+                          <li class="dropdown__item" data-value="Москва">
+                            Москва
+                          </li>
+                          <li class="dropdown__item" data-value="Казань">
+                            Казань
+                          </li>
+                          <li class="dropdown__item" data-value="Оренбург">
+                            Оренбург
+                          </li>
+                        </ul>
+                      </div>
+                      <select
+                        class="form__sity-select visually-hidden"
+                        required
+                      >
+                        <option></option>
+                        <option value="Санкт-Петербург">Санкт-Петербург</option>
+                        <option value="Москва">Москва</option>
+                        <option value="Казань">Казань</option>
+                        <option value="Оренбург">Оренбург</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <label for="form-policy" class="form__policy">
+                    <input
+                      class="form__input-checkbox visually-hidden"
+                      type="checkbox"
+                      name="policy"
+                      id="form-policy"
+                      required
+                    />
+                    <span class="form__checkbox"></span>
+                    <span
+                      >Я согласен на обработку моих персональных данных</span
+                    >
+                  </label>
+                </fieldset>
+                <button class="form__btn btn" type="submit">
+                  <span>отправить</span>
+                  <span>
+                    <svg width="10" height="10">
+                      <use
+                        xlink:href="img/sprite/sprite.svg#button-arrow"
+                      ></use>
+                    </svg>
+                  </span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__wrapper container">
+          <div class="footer__container">
+            <div class="footer__menu">
+              <a class="footer__logo" href="index.html">
+                <svg width="52" height="52">
+                  <use xlink:href="img/sprite/sprite.svg#logo"></use>
+                </svg>
+              </a>
+              <ul>
+                <li><a href="#about">О проекте</a></li>
+                <li><a href="#programs">Программы</a></li>
+                <li><a href="#conditions">Как поехать</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li><a href="#news">Новости</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="footer__social social">
+              <a href="#">
+                <svg width="16" height="16">
+                  <use xlink:href="img/sprite/sprite.svg#icon-vk"></use>
+                </svg>
+              </a>
+              <a href="#">
+                <svg width="16" height="16">
+                  <use xlink:href="img/sprite/sprite.svg#icon-ok"></use>
+                </svg>
+              </a>
+              <a href="#">
+                <svg width="16" height="16">
+                  <use xlink:href="img/sprite/sprite.svg#icon-reddit"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer__policy">
+            <p>Masa © 2023 Все права защищены</p>
+            <a href="#">Политика конфиденциальности</a>
+          </div>
+        </div>
       </footer>
     </div>
 
-    <!-- Модалки -->
     <div class="modal modal--preload" data-modal="feedback">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
+          <button
+            class="modal__close-btn btn-reset"
+            type="button"
+            aria-label="Закрыть попап"
+            data-close-modal
+          >
+            <svg width="22" height="22">
+              <use xlink:href="img/sprite/sprite.svg#close"></use>
             </svg>
           </button>
+          <div class="modal__header">
+            <h3>Напишите нам</h3>
+            <p>
+              Оставьте ваши контакты, если у вас остались вопросы&nbsp;– мы на
+              них ответим!
+            </p>
+          </div>
+          <div class="modal__fields">
+            <div
+              class="modal__form"
+              data-form-validate="data-form-validate"
+              data-callback="base"
+            >
+              <form action="#" method="post">
+                <div
+                  data-validate-type="text"
+                  data-limitation="name"
+                  class="modal__field"
+                  data-required="data-required"
+                >
+                  <label for="name">Имя</label>
+                  <input type="text" name="name" id="name" />
+                </div>
+                <div
+                  class="modal__field"
+                  data-validate-type="phone"
+                  data-required="data-required"
+                >
+                  <label for="tel">Телефон</label>
+                  <input type="text" name="tel" id="tel" />
+                </div>
+                <div
+                  class="modal__field field-cities"
+                  data-validate-type="text"
+                  data-required="data-required"
+                >
+                  <label for="city">Выберите город</label>
+                  <input
+                    class="input-cities"
+                    type="text"
+                    name="city"
+                    id="city"
+                    readonly
+                  />
+                  <span>
+                    <svg width="10" height="10">
+                      <use xlink:href="img/sprite/sprite.svg#icon-plus"></use>
+                    </svg>
+                  </span>
+                  <div class="field-cities-select">
+                    <button type="button">Санкт-Петербург</button>
+                    <button type="button">Москва</button>
+                    <button type="button">Казань</button>
+                    <button type="button">Сочи</button>
+                  </div>
+                </div>
+                <div
+                  data-validate-type="checkbox"
+                  data-required="data-required"
+                  class="modal__policy"
+                >
+                  <input type="checkbox" name="policy" id="policy" required />
+                  <span></span>
+                  <label for="policy"
+                    >Я согласен на обработку моих персональных данных</label
+                  >
+                </div>
+                <button class="modal__btn btn" type="submit">
+                  отправить
+                  <span class="btn-content">
+                    <svg width="10" height="10">
+                      <use
+                        xlink:href="img/sprite/sprite.svg#button-arrow"
+                      ></use>
+                    </svg>
+                  </span>
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
+    <template id="news-card">
+      <div class="news-card">
+        <picture>
+          <source srcset="" type="image/webp" />
+          <img
+            src=""
+            srcset=""
+            loading="lazy"
+            alt="Новость."
+            width="286"
+            height="400"
+          />
+        </picture>
+        <div class="news-card__content">
+          <div class="news-card__date">
+            <span></span>
+          </div>
+          <div class="news-card__title">
+            <h3></h3>
+          </div>
+          <div class="news-card__descr">
+            <p></p>
+            <a class="news-card__btn" href="#">
+              <span>
+                <svg width="8" height="8">
+                  <use xlink:href="img/sprite/sprite.svg#button-arrow"></use>
+                </svg>
+              </span>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-
+    </template>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>

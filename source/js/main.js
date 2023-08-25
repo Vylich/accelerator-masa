@@ -1,6 +1,11 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
+import {initHeroSlider, initProgramsSlider, initReviewsSlider, initNewsSlider} from './modules/slider';
+import {createMap} from './modules/map';
+import {initDropdown} from './modules/dropdown';
+import {showContentAccordion} from './modules/accordion';
+import {createNews} from './modules/init-news';
 
 // ---------------------------------
 
@@ -10,6 +15,14 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  createNews();
+  initHeroSlider();
+  createMap();
+  initProgramsSlider();
+  initDropdown();
+  initReviewsSlider();
+  showContentAccordion();
+  initNewsSlider();
 
   // Modules
   // ---------------------------------

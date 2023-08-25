@@ -38,26 +38,15 @@
 
 // Desktop first
 
-@mixin vp-1919 {
-  @media (max-width: ($vp-1920 - 1px)) {
-    @content;
-  }
-}
-
 @mixin vp-1439 {
   @media (max-width: ($vp-1440 - 1px)) {
     @content;
   }
 }
 
-@mixin vp-1279 {
-  @media (max-width: ($vp-1280 - 1px)) {
-    @content;
-  }
-}
 
-@mixin vp-1023 {
-  @media (max-width: ($vp-1024 - 1px)) {
+@mixin vp-1199 {
+  @media (max-width: ($vp-1200 - 1px)) {
     @content;
   }
 }
@@ -68,12 +57,50 @@
   }
 }
 
-@mixin vp-374 {
-  @media (max-width: ($vp-375 - 1px)) {
-    @content;
+
+@mixin background-image($filename, $folder, $ext: "jpg") {
+  @supports (background-image: url("../img/#{$folder}/#{$filename}.webp")) {
+    background-image: url("../img/#{$folder}/#{$filename}.webp");
+
+    @include vp-1199 {
+      background-image: url("../img/#{$folder}/#{$filename}-tablet.webp");
+    }
+
+    @include vp-767 {
+      background-image: url("../img/#{$folder}/#{$filename}-mobile.webp");
+    }
+
+    @include retina {
+      background-image: url("../img/#{$folder}/#{$filename}@2x.webp");
+
+      @include vp-1199 {
+        background-image: url("../img/#{$folder}/#{$filename}-tablet@2x.webp");
+      }
+
+      @include vp-767 {
+        background-image: url("../img/#{$folder}/#{$filename}-mobile@2x.webp");
+      }
+    }
+  }
+
+  @supports not (background-image: url("../img/#{$folder}/#{$filename}.webp")) {
+    background-image: url("../img/#{$folder}/#{$filename}.#{$ext}");
+
+    @include retina {
+      background-image: url("../img/#{$folder}/#{$filename}@2x.#{$ext}");
+    }
   }
 }
 
+@mixin font(
+  $font-weight: 400,
+  $font-size: 15px,
+  $line-height: 24px
+) {
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+}
 // Mobile first
 
 // @mixin vp-375 {

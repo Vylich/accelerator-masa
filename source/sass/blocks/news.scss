@@ -1,0 +1,46 @@
+.news {
+  margin-top: 120px;
+}
+
+.news__wrapper {
+  h2 {
+    margin: 0;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 50px;
+    color: $color-cerulean-blue;
+    text-align: center;
+  }
+}
+
+.news__tabs {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.news__btn {
+  padding: 14px 26px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+  color: $color-cerulean-blue;
+  background-color: $color-transparent;
+  outline: none;
+  border-radius: 20px;
+  border: 1px solid $color-transparent;
+  cursor: pointer;
+
+  &.is-active {
+    border: 1px solid $color-cerulean-blue;
+  }
+}
+
+.news__buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}

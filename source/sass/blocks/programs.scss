@@ -1,0 +1,160 @@
+.programs {
+  margin-top: 120px;
+}
+
+.programs__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+
+  h2 {
+    margin: 0;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 50px;
+    color: $color-cerulean-blue;
+  }
+}
+
+.programs__container {
+  display: flex;
+}
+
+.programs__card {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 280px 51px 20px 20px;
+  border-radius: 12px;
+  position: relative;
+
+  &--internship {
+    @include background-image("program-internship", "program");
+  }
+
+  &--volunteering {
+    @include background-image("program-volunteering", "program");
+  }
+
+  &--studies {
+    @include background-image("program-studies", "program");
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $overlay-photo;
+    top: 0;
+    left: 0;
+    border-radius: 12px;
+    z-index: 1;
+  }
+}
+
+.programs__inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.programs__inner-main {
+  background-color: $color-default-white;
+  padding: 14px 18px 0;
+  width: 194px;
+  border-radius: 12px 12px 0 0;
+  position: relative;
+
+  h3 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 26px;
+    color: $color-cerulean-blue;
+    margin: 0;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    right: -20px;
+    bottom: 0;
+    background-image: url("../img/icons/icon-angle.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.programs__inner-descr {
+  display: flex;
+  background-color: $color-default-white;
+  padding: 10px 18px 15px;
+  border-radius: 0 12px 12px 12px;
+  align-items: center;
+  gap: 15px;
+  min-height: 80px;
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+}
+
+.programs__inner-btn {
+  background-color: $color-cerulean-blue;
+  width: 30px;
+  height: 30px;
+  padding: 11px;
+  border-radius: 50%;
+  display: flex;
+}
+
+.programs__buttons {
+  position: relative;
+  position: relative;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.programs__line {
+  position: absolute;
+  height: 2px;
+  width: calc(100% - 106px);
+  background-color: $color-cerulean-blue-opacity;
+  left: 0;
+}
+
+
+.programs__inner-line {
+  height: 2px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: $color-cerulean-blue;
+  transition: width 0.2s ease;
+}
+
+.btn__next,
+.btn__prev {
+  width: 22px;
+  height: 22px;
+  padding: 6px;
+  background-color: $color-transparent;
+  outline: none;
+  border: none;
+  display: flex;
+  cursor: pointer;
+}

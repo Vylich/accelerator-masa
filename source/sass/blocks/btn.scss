@@ -1,26 +1,41 @@
 .btn {
-  display: inline-flex;
-  padding: 10px 20px;
-
-  color: $color-default-white;
-
-  background-color: $color-neon-blue;
-  border: none;
+  border: 1px solid $color-cerulean-blue;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  padding: 4px 4px 4px 20px;
+  gap: 20px;
   cursor: pointer;
+  background-color: $color-transparent;
+  letter-spacing:  0.28px;
+  font-size: 14px;
+  line-height: 14px;
 
   transition: opacity $trans-default;
 
-  &--red {
-    background-color: $color-torch-red;
-  }
-
   &:disabled {
     opacity: 0.5;
-
     pointer-events: none;
   }
 
   @include hover-focus {
     opacity: 0.8;
+  }
+
+  span:first-child {
+    color: $color-cerulean-blue;
+    text-transform: uppercase;
+  }
+
+  span:last-child {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: $color-cerulean-blue;
+    outline: none;
+    border: 1px solid $color-transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

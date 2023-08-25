@@ -64,6 +64,15 @@ function applyFocusVisiblePolyfill(scope) {
       return true;
     }
 
+    if (tagName === 'BUTTON' && !el.readOnly) {
+      return true;
+    }
+
+    if (tagName === 'A') {
+      return true;
+    }
+
+
     if (el.isContentEditable) {
       return true;
     }

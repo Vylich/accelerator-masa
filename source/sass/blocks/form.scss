@@ -1,0 +1,188 @@
+.form__wrapper {
+  padding-top: 120px;
+  max-width: 1440px;
+}
+
+.form__wrapper {
+  position: relative;
+  border-radius: 16px;
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border-radius: 16px;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+}
+
+.form__container {
+  position: relative;
+}
+
+.form__content {
+  position: relative;
+  background-color: $color-cerulean-blue;
+  max-width: 498px;
+  min-height: 803px;
+  padding: 81px 74px 51px;
+  border-radius: 16px;
+  z-index: 2;
+
+  h3 {
+    color: $color-default-white;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 36px;
+    margin-bottom: 28px;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    color: $color-alabaster;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+
+  form {
+    margin-top: 30px;
+  }
+}
+
+.form__fieldset {
+  border: none;
+  outline: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0;
+}
+
+.form__field-cities-select {
+  display: none;
+  position: absolute;
+  width: 100%;
+  flex-direction: column;
+  z-index: 1;
+  top: 80px;
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  span {
+    color: $color-alabaster;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  input {
+    background-color: $color-cerulean-blue;
+    outline: none;
+    border: 1px solid $color-default-white-opacity;
+    border-radius: 8px;
+    height: 50px;
+    padding: 16px 25px;
+    color: $color-default-white;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+  }
+
+  textarea {
+    background-color: $color-cerulean-blue;
+    outline: none;
+    border: 1px solid $color-default-white-opacity;
+    border-radius: 8px;
+    height: 98px;
+    padding: 16px 25px;
+    color: $color-default-white;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+  }
+}
+
+.form__policy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  span:last-child {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    color: $color-default-white;
+  }
+}
+
+.form__checkbox {
+  border-radius: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: $color-cerulean-blue;
+  border: 1px solid $color-default-white-opacity;
+  cursor: pointer;
+}
+
+.form__input-checkbox:checked + .form__checkbox {
+  background-color: $color-default-white;
+  border: 1px solid $color-default-white;
+}
+
+.form__btn {
+  background-color: transparent;
+  border-color: $color-default-white;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0.28px;
+  height: 54px;
+  gap: 0;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+
+  span:first-child {
+    color: $color-default-white;
+    width: 100%;
+  }
+
+  span:last-child {
+    background-color: $color-default-white;
+    color: $color-cerulean-blue;
+    padding: 18px;
+  }
+}
+
+.form__sity {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  span {
+    color: $color-alabaster;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+}
+
+.form__sity-wrap {
+  background-color: $color-cerulean-blue;
+  border: 1px solid $color-default-white-opacity;
+  border-radius: 8px;
+  height: 50px;
+  color: $color-default-white;
+}

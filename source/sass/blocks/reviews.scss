@@ -1,0 +1,129 @@
+.reviews {
+  margin-top: 120px;
+}
+
+.reviews__wrapper {
+  h2 {
+    margin: 0;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 50px;
+    color: $color-cerulean-blue;
+  }
+}
+
+.reviews__container {
+  margin-bottom: 10px;
+  margin-top: 52px;
+}
+
+.reviews__item {
+  border: 1px solid $color-cerulean-blue;
+  border-radius: 16px;
+  padding: 50px;
+  max-width: 605px;
+
+  h4 {
+    margin: 0;
+    color: $color-cerulean-blue;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 26px;
+    margin-top: 30px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    margin-top: 25px;
+  }
+}
+
+.reviews__buttons {
+  margin-top: 30px;
+}
+
+.reviews__avatar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0;
+    color: $color-cerulean-blue;
+    text-align: left;
+    max-width: 89px;
+  }
+}
+
+.reviews__profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reviews__info {
+  display: flex;
+  gap: 25px;
+
+  span {
+    color: $color-cerulean-blue;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0.12px;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+}
+
+.reviews__buttons {
+  position: relative;
+  position: relative;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.reviews__line {
+  position: absolute;
+  height: 2px;
+  width: calc(100% - 106px);
+  background-color: $color-cerulean-blue-opacity;
+  left: 0;
+}
+
+
+.reviews__inner-line {
+  height: 2px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: $color-cerulean-blue;
+  transition: width 0.2s ease;
+}
+
+.btn__next,
+.btn__prev {
+  width: 22px;
+  height: 22px;
+  padding: 6px;
+  background-color: $color-transparent;
+  outline: none;
+  border: none;
+  display: flex;
+  cursor: pointer;
+}

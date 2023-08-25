@@ -1,0 +1,20 @@
+.questions {
+  margin-top: 120px;
+}
+
+.questions__wrapper {
+  padding: 0 206px;
+
+  h2 {
+    margin: 0;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 50px;
+    color: $color-cerulean-blue;
+    text-align: center;
+  }
+}
+
+.questions__accordion {
+  margin-top: 60px;
+}

@@ -12,7 +12,7 @@ const sprite = () =>
       .src('source/img/icons/*.svg')
       .pipe(svgstore({inlineSvg: true}))
       .pipe(rename('sprite.svg'))
-      .pipe(gulp.dest('build/img/icons'));
+      .pipe(gulp.dest('build/img/sprite'));
 
 const optimizeSvg = () =>
   gulp
@@ -67,9 +67,9 @@ const optimizePng = () =>
 */
 
 const createWebp = () => {
-  const root = 'content';
+  const root = '';
   return gulp
-      .src(`source/img/${root}/*.{png,jpg}`)
+      .src(`source/img/${root}**/*.{png,jpg}`)
       .pipe(webp({quality: 90}))
       .pipe(gulp.dest(`source/img/${root}`));
 };

@@ -1,0 +1,15 @@
+.social {
+  a {
+    width: 36px;
+    height: 36px;
+    padding: 10px;
+    background-color: $color-cerulean-blue;
+    border: 1px solid $color-transparent;
+    border-radius: 50%;
+    display: flex;
+  }
+
+  svg {
+    color: $color-default-white;
+  }
+}
