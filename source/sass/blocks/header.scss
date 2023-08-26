@@ -11,17 +11,27 @@
 }
 
 .header__menu {
-  border: 1px solid $color-cerulean-blue;
-  border-radius: 30px;
   display: flex;
-  align-items: center;
-  padding: 4px 4px 4px 20px;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  max-height: 100vh;
+  padding-bottom: 20px;
 }
 
 .header__button {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 20px;
+  border: 1px solid $color-cerulean-blue;
+  background-color: $color-default-white;
+  border-radius: 30px;
+  display: flex;
+  padding: 4px 4px 4px 20px;
+  transition: width $trans-default;
 
   span {
     color: $color-cerulean-blue;

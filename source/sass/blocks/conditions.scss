@@ -1,5 +1,9 @@
 .conditions {
   margin-top: 120px;
+
+  @include vp-1199 {
+    margin-top: 100px;
+  }
 }
 
 .conditions__wrapper {
@@ -10,6 +14,13 @@
   display: grid;
   grid-template-columns: 498px 498px;
   column-gap: 138px;
+
+  @include vp-1199 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .conditions__main {
@@ -18,6 +29,11 @@
     font-weight: 400;
     line-height: 50px;
     margin: 0;
+
+    @include vp-1199 {
+      font-size: 34px;
+      line-height: 50px;
+    }
   }
 
   p {
@@ -27,19 +43,38 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
+
+    @include vp-1199 {
+      line-height: 20px;
+      margin-top: 30px;
+      margin-bottom: 40px;
+    }
   }
 
   img {
     border-radius: 16px;
+
+    @include vp-1199 {
+      width: 100%;
+    }
   }
 }
 
 .conditions__info {
+  @include vp-1199 {
+    margin-top: 40px;
+  }
+
   h3 {
     margin: 0;
     font-size: 32px;
     font-weight: 400;
     line-height: 36px;
+
+    @include vp-1199 {
+      font-size: 28px;
+      line-height: 28px;
+    }
   }
 }
 
@@ -54,6 +89,12 @@
   padding-left: 20px;
   counter-reset: conditions;
 
+  @include vp-1199 {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
   li {
     position: relative;
     padding: 25px;
@@ -63,6 +104,11 @@
     line-height: 26px;
     border-radius: 16px;
     border: 1px solid $color-default-white;
+
+    @include vp-1199 {
+      padding: 30px 25px;
+      padding-right: 27px;
+    }
   }
 }
 
@@ -85,5 +131,10 @@
     line-height: 22px;
     letter-spacing: 0.22px;
     text-transform: uppercase;
+
+    @include vp-1199 {
+      font-size: 22px;
+      top: -14px;
+    }
   }
 }

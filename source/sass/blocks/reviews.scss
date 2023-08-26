@@ -1,20 +1,43 @@
 .reviews {
   margin-top: 120px;
+
+  @include vp-1199 {
+    margin-top: 100px;
+  }
 }
 
 .reviews__wrapper {
+  @include vp-1199 {
+    overflow: visible;
+  }
+
   h2 {
     margin: 0;
     font-size: 50px;
     font-weight: 400;
     line-height: 50px;
     color: $color-cerulean-blue;
+
+    @include vp-1199 {
+      font-size: 34px;
+    }
   }
 }
 
 .reviews__container {
   margin-bottom: 10px;
   margin-top: 52px;
+
+  @include vp-1199 {
+    margin-top: 40px;
+    overflow: visible;
+  }
+}
+
+.reviews__slider {
+  @include vp-1199 {
+    overflow: visible;
+  }
 }
 
 .reviews__item {
@@ -22,6 +45,10 @@
   border-radius: 16px;
   padding: 50px;
   max-width: 605px;
+
+  @include vp-1199 {
+    max-width: 560px;
+  }
 
   h4 {
     margin: 0;

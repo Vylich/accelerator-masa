@@ -6,6 +6,11 @@
   border-radius: 12px;
   width: calc((100% - 96px) / 4);
 
+  @include vp-1199 {
+    width: 100%;
+    height: 350px;
+  }
+
   img {
     position: absolute;
     z-index: -1;
@@ -35,7 +40,12 @@
   width: min-content;
   border-radius: 0 12px 0 0;
   padding-top: 5px;
+  padding-right: 12px;
   position: relative;
+
+  @include vp-1199 {
+    padding: 12px 12px 6px 0;
+  }
 
   &::before {
     position: absolute;
@@ -44,7 +54,8 @@
     height: 16px;
     right: -16px;
     bottom: 0;
-    background-image: url("../img/icons/icon-angle.svg");
+    mask-image: url("../img/icons/icon-angle.svg");
+    background-color: $color-alabaster;
   }
 
   &::after {
@@ -54,7 +65,8 @@
     height: 16px;
     left: 0;
     top: -16px;
-    background-image: url("../img/icons/icon-angle.svg");
+    mask-image: url("../img/icons/icon-angle.svg");
+    background-color: $color-alabaster;
   }
 
   span {
@@ -72,8 +84,12 @@
   max-width: 214px;
   padding-bottom: 2px;
   padding-right: 10px;
-  padding-top: 3px;
+  padding-top: 10px;
   position: relative;
+
+  @include vp-1199 {
+    padding: 10px 18px 6px 0;
+  }
 
   &::before {
     position: absolute;
@@ -82,7 +98,8 @@
     height: 16px;
     right: -16px;
     bottom: 0;
-    background-image: url("../img/icons/icon-angle.svg");
+    mask-image: url("../img/icons/icon-angle.svg");
+    background-color: $color-alabaster;
   }
 
   h3 {
@@ -97,13 +114,16 @@
 .news-card__descr {
   background-color: $color-alabaster;
   border-radius: 0 12px 0 0;
-  gap: 10px;
-  padding-right: 19px;
-  padding-bottom: 13px;
-  padding-top: 8px;
+  padding-right: 18px;
+  padding-bottom: 16px;
+  padding-top: 16px;
   align-items: center;
   display: flex;
   position: relative;
+
+  @include vp-1199 {
+    padding: 12px 18px 15px 0;
+  }
 
   &::before {
     position: absolute;
@@ -112,7 +132,8 @@
     height: 16px;
     right: -16px;
     bottom: 0;
-    background-image: url("../img/icons/icon-angle.svg");
+    mask-image: url("../img/icons/icon-angle.svg");
+    background-color: $color-alabaster;
   }
 
   p {
@@ -120,6 +141,11 @@
     line-height: 18px;
     white-space: pre-line;
     margin: 0;
+
+    @include vp-1199 {
+      line-height: 20px;
+      padding-right: 18px;
+    }
   }
 }
 
@@ -132,5 +158,23 @@
   padding-top: 13px;
 }
 
+.news-card__btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: $color-cerulean-blue;
+  padding: 10px;
+  display: flex;
+  align-items: center;
 
+  svg {
+    color: $color-default-white;
+  }
+}
 
+.slide-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 30px;
+}

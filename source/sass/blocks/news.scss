@@ -1,5 +1,9 @@
 .news {
   margin-top: 120px;
+
+  @include vp-1199 {
+    margin-top: 100px;
+  }
 }
 
 .news__container {
@@ -14,6 +18,11 @@
     line-height: 50px;
     color: $color-cerulean-blue;
     text-align: center;
+
+    @include vp-1199 {
+      font-size: 34px;
+      line-height: 50px;
+    }
   }
 }
 
@@ -23,6 +32,11 @@
   justify-content: center;
   margin-top: 40px;
   overflow-x: scroll;
+
+  @include vp-1199 {
+    margin-top: 30px;
+    gap: 9px;
+  }
 }
 
 .news__btn {
@@ -39,6 +53,10 @@
   border: 1px solid $color-transparent;
   cursor: pointer;
 
+  @include vp-1199 {
+    padding: 13px 20px;
+  }
+
   &.is-active {
     border: 1px solid $color-cerulean-blue;
   }
@@ -47,6 +65,7 @@
 .news__buttons {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   margin-top: 40px;
 }

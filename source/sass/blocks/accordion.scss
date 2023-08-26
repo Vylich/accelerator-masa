@@ -9,6 +9,10 @@
   border-radius: 16px;
   padding: 40px;
   width: 100%;
+
+  @include vp-1199 {
+    padding: 30px;
+  }
 }
 
 .accordion__header {
@@ -17,6 +21,7 @@
   justify-content: space-between;
   align-items: center;
   pointer-events: none;
+  position: relative;
 
   span {
     font-size: 28px;
@@ -24,6 +29,12 @@
     line-height: 40px;
     color: $color-cerulean-blue;
     padding-right: 200px;
+
+    @include vp-1199 {
+      font-size: 22px;
+      line-height: 26px;
+      padding-right: 23px;
+    }
   }
 
   button {
@@ -36,6 +47,8 @@
     position: relative;
     cursor: pointer;
     pointer-events: all;
+    position: absolute;
+    right: 0;
 
     &::after {
       content: "";
@@ -78,6 +91,12 @@
   opacity: 0;
   visibility: hidden;
   transition: max-height $trans-default, opacity $trans-default, visibility $trans-default, margin-top $trans-default;
+
+
+  @include vp-1199 {
+    line-height: 20px;
+    padding-right: 34px;
+  }
 
   &.is-active {
     visibility: visible;

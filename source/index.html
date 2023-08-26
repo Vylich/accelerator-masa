@@ -24,67 +24,69 @@
               <button type="button"></button>
             </div>
             <div class="menu">
-              <div class="menu__item">
-                <a href="#">О проекте</a>
-              </div>
-              <div class="menu__item item-select">
-                <div class="item-select__wrapper">
-                  <a class="item-select__link" href="#">Программы</a>
-                  <span>
-                    <svg
-                      width="12"
-                      height="12"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <use xlink:href="img/sprite/sprite.svg#select-arrow" />
-                    </svg>
-                  </span>
+              <div class="menu__wrapper">
+                <div class="menu__item">
+                  <a href="#about">О проекте</a>
                 </div>
-                <ul class="menu__list">
-                  <li class="menu__list-item">
-                    <a href="#">Стажировки</a>
-                  </li>
-                  <li class="menu__list-item">
-                    <a href="#">Волонтёрство</a>
-                  </li>
-                  <li class="menu__list-item">
-                    <a href="#">Учёба</a>
-                  </li>
-                  <li class="menu__list-item">
-                    <a href="#">Религия</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="menu__item">
-                <a href="#">как поехать</a>
-              </div>
-              <div class="menu__item"><a href="#">отзывы</a></div>
-              <div class="menu__item item-select">
-                <div class="item-select__wrap">
-                  <a class="item-select__link" href="#">новости</a>
-                  <span>
-                    <svg width="12" height="12">
-                      <use xlink:href="img/sprite/sprite.svg#select-arrow" />
-                    </svg>
-                  </span>
+                <div class="menu__item item-select">
+                  <div class="item-select__wrapper" data-menu="program">
+                    <span>программы</span>
+                    <span>
+                      <svg
+                        width="12"
+                        height="12"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <use xlink:href="img/sprite/sprite.svg#select-arrow" />
+                      </svg>
+                    </span>
+                  </div>
+                  <ul class="item-select__list" id="program">
+                    <li class="item-select__list-item">
+                      <a href="#programs">Стажировки</a>
+                    </li>
+                    <li class="item-select__list-item">
+                      <a href="#programs">Волонтёрство</a>
+                    </li>
+                    <li class="item-select__list-item">
+                      <a href="#programs">Учёба</a>
+                    </li>
+                    <li class="item-select__list-item">
+                      <a href="#programs">Религия</a>
+                    </li>
+                  </ul>
                 </div>
-                <ul class="menu__list">
-                  <li class="menu__list-item">
-                    <a href="#">Стажировки</a>
-                  </li>
-                  <li class="menu__list-item">
-                    <a href="#">Волонтёрство</a>
-                  </li>
-                  <li class="menu__list-item">
-                    <a href="#">Учёба</a>
-                  </li>
-                  <li class="menu__list-item">
-                    <a href="#">Религия</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="menu__item">
-                <a href="#">контакты</a>
+                <div class="menu__item">
+                  <a href="#conditions">как поехать</a>
+                </div>
+                <div class="menu__item"><a href="#reviews">отзывы</a></div>
+                <div class="menu__item item-select">
+                  <div class="item-select__wrapper" data-menu="news">
+                    <span>новости</span>
+                    <span>
+                      <svg width="12" height="12">
+                        <use xlink:href="img/sprite/sprite.svg#select-arrow" />
+                      </svg>
+                    </span>
+                  </div>
+                  <ul class="item-select__list" id="news">
+                    <li class="item-select__list-item">
+                      <a href="#news-block">Стажировки</a>
+                    </li>
+                    <li class="item-select__list-item">
+                      <a href="#news-block">Волонтёрство</a>
+                    </li>
+                    <li class="item-select__list-item">
+                      <a href="#news-block">Учёба</a>
+                    </li>
+                    <li class="item-select__list-item">
+                      <a href="#news-block">Религия</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="menu__item">
+                  <a href="#contacts">контакты</a>
+                </div>
               </div>
             </div>
           </div>
@@ -362,31 +364,10 @@
             </p>
             <picture>
               <source
-                media="(max-width: 767px)"
+                type="image/webp"
                 srcset="
-                  img/content/img-waymark-tablet.webp,
-                  img/content/img-waymark-tablet@2x.webp 2x
-                "
-              />
-              <source
-                media="(max-width: 767px)"
-                srcset="
-                  img/content/img-waymark-tablet.jpg,
-                  img/content/img-waymark-tablet@2x.jpg 2x
-                "
-              />
-              <source
-                media="(max-width: 1199px)"
-                srcset="
-                  img/content/img-waymark-tablet.webp,
-                  img/content/img-waymark-tablet@2x.webp 2x
-                "
-              />
-              <source
-                media="(max-width: 1199px)"
-                srcset="
-                  img/content/img-waymark-tablet.jpg,
-                  img/content/img-waymark-tablet@2x.jpg 2x
+                  img/content/img-waymark.webp 1x,
+                  img/content/img-waymark@2x.webp 2x
                 "
               />
               <img
@@ -417,7 +398,7 @@
         </div>
       </section>
 
-      <section id="news" class="news">
+      <section id="news-block" class="news">
         <div class="news__wrapper container">
           <h2>Новости и материалы</h2>
           <div class="news__tabs">

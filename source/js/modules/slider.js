@@ -62,6 +62,7 @@ const initHeroSlider = () => {
     },
   });
 };
+
 const lineChild = document.querySelector('.programs__inner-line');
 const lineParent = document.querySelector('.programs__line');
 const slides = document.querySelectorAll('.programs__card');
@@ -85,7 +86,7 @@ const initProgramsSlider = () => {
 
   const swiper = new Swiper(programsSliderNode, {
     speed: 300,
-    slidesPerView: 1,
+    slidesPerView: 'auto',
     spaceBetween: 0,
     navigation: {
       nextEl: '.programs__btn-next',
@@ -93,7 +94,6 @@ const initProgramsSlider = () => {
     },
     breakpoints: {
       768: {
-        slidesPerView: 2,
         spaceBetween: 30,
       },
       1199: {

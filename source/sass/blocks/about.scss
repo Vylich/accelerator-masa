@@ -1,5 +1,9 @@
 .about {
   margin-top: 120px;
+  
+  @include vp-1199 {
+    margin-top: 100px;
+  }
 }
 
 .about__main {
@@ -12,6 +16,11 @@
     font-weight: 400;
     line-height: 50px;
     margin: 0;
+
+    @include vp-1199 {
+      font-size: 34px;
+      line-height: 50px;
+    }
   }
 
   p {
@@ -20,12 +29,21 @@
     line-height: 32px;
     margin: 0;
     margin-top: 30px;
+
+    @include vp-1199 {
+      font-size: 20px;
+      line-height: 26px;
+    }
   }
 }
 
 .about__secondary {
   flex: 1;
   max-width: 498px;
+
+  @include vp-1199 {
+    margin-top: 40px;
+  }
 
   h3 {
     color: $color-cerulean-blue;
@@ -41,6 +59,11 @@
     line-height: 26px;
     margin: 0;
     margin-top: 46px;
+
+    @include vp-1199 {
+      margin-top: 30px;
+      line-height: 20px;
+    }
   }
 }
 
@@ -48,6 +71,10 @@
   display: flex;
   padding-right: 106px;
   justify-content: space-between;
+
+  @include vp-1199 {
+    flex-direction: column;
+  }
 }
 
 .about__btn {
@@ -65,6 +92,10 @@
   color: $color-default-white;
   column-gap: 52px;
   row-gap: 54px;
+
+  @include vp-1199 {
+    padding: 40px 60px;
+  }
 }
 
 .about__item {
@@ -76,13 +107,22 @@
   align-items: center;
   position: relative;
 
-  span {
+  @include vp-1199 {
+    flex-direction: column;
+    padding: 30px;
+  }
 
+  span {
     font-size: 26px;
     font-weight: 400;
     line-height: 30px;
     letter-spacing: 0.26px;
     text-transform: uppercase;
+
+    @include vp-1199 {
+      font-size: 20px;
+      line-height: 22px;
+    }
   }
 
   p {
@@ -91,6 +131,10 @@
     font-weight: 300;
     line-height: 20px;
     color: $color-alabaster;
+
+    @include vp-1199 {
+      margin-top: 12px;
+    }
   }
 
   &::after {

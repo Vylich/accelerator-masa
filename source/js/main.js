@@ -6,6 +6,7 @@ import {createMap} from './modules/map';
 import {initDropdown} from './modules/dropdown';
 import {showContentAccordion} from './modules/accordion';
 import {initNewsSlider} from './modules/init-news';
+import {initMenu} from './modules/menu';
 
 // ---------------------------------
 
@@ -22,6 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initReviewsSlider();
   showContentAccordion();
   initNewsSlider();
+  initMenu();
 
   // Modules
   // ---------------------------------
