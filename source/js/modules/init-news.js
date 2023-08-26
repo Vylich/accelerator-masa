@@ -1,11 +1,70 @@
 import {newsData} from '../data-news/data-news';
+import Swiper from '../vendor/swiper';
 
 const newsCardNode = document.querySelector('#news-card').content.querySelector('.news-card');
 const newsSliderWrapperNode = document.querySelector('.news__container');
+const sliderNews = document.querySelector('.news__slider');
+const newTabsNode = document.querySelectorAll('.news__btn');
 
-const createNews = () => {
+const initNewsSlider = () => {
+  createNews(newsData);
 
+  const swiper = new Swiper(sliderNews, {
+    speed: 300,
+    spaceBetween: 30,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+      },
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 1,
+        pagination: {
+          dynamicMainBullets: 4,
+        },
+      },
+      1200: {
+        slidesPerView: 'auto',
+        slidesPerGroup: 3,
+        spaceBetween: 32,
+      },
+    },
+    navigation: {
+      nextEl: '.news__btn-next',
+      prevEl: '.news__btn-prev',
+    },
+    pagination: {
+      el: '.news__pagination',
+      clickable: true,
+      renderBullet: (index, className) => {
+        return '<button class="' + className + '">' + (index + 1) + '</button>';
+      },
+    },
+  });
+  newTabsNode.forEach((btn) =>
+    btn.addEventListener('click', () => {
+      newTabsNode.forEach((el) => {
+        el.classList.remove('is-active');
+      });
 
+      btn.classList.add('is-active');
+
+      const filter = btn.getAttribute('data-tab');
+
+      if (filter === 'all') {
+        createNews(newsData);
+      } else {
+        const newNews = newsData.filter((el) => el.type === filter);
+        createNews(newNews);
+      }
+
+      swiper.update();
+    })
+  );
+};
+
+const createNews = (arr) => {
   let breakpointDesktop = window.matchMedia('(min-width: 1200px)');
   let breakpointTablet = window.matchMedia('(min-width: 768px)');
   let breakpointMobile = window.matchMedia('(min-width: 320px)');
@@ -14,7 +73,7 @@ const createNews = () => {
     switch (true) {
       case breakpointDesktop.matches:
         newsSliderWrapperNode.innerHTML = '';
-        newsData.forEach((elem, index) => {
+        arr.forEach((elem, index) => {
           const newCard = createNew(elem);
           if (index % 3 === 0) {
             newCard.classList.add('slide-active');
@@ -24,7 +83,7 @@ const createNews = () => {
         break;
       case breakpointTablet.matches:
         newsSliderWrapperNode.innerHTML = '';
-        let newsDataChunked = chunkArray(newsData, 4);
+        let newsDataChunked = chunkArray(arr, 4);
 
         newsDataChunked.forEach((item) => {
           const element = document.createElement('div');
@@ -36,10 +95,9 @@ const createNews = () => {
           }
           newsSliderWrapperNode.appendChild(element);
         });
-        console.log('zcyst lyb');
         break;
       case breakpointMobile.matches:
-        newsDataChunked = chunkArray(newsData, 2);
+        newsDataChunked = chunkArray(arr, 2);
 
         newsDataChunked.forEach((item) => {
           const element = document.createElement('div');
@@ -51,7 +109,6 @@ const createNews = () => {
           }
           newsSliderWrapperNode.appendChild(element);
         });
-        console.log('мобилка');
         break;
     }
   };
@@ -62,6 +119,7 @@ const createNews = () => {
   breakpointChecker();
   return newsSliderWrapperNode;
 };
+
 
 function chunkArray(array, chunkSize) {
   const chunkedArray = [];
@@ -84,4 +142,4 @@ const createNew = (elem) => {
 };
 
 
-export {createNews};
+export {initNewsSlider, createNews};

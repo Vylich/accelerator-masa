@@ -157,46 +157,4 @@ const initReviewsSlider = () => {
   });
 };
 
-const sliderNews = document.querySelector('.news__slider');
-
-const initNewsSlider = () => {
-  const swiper = new Swiper(sliderNews, {
-    speed: 300,
-    slidesPerView: 3,
-    slidesPerGroup: 3,
-    spaceBetween: 30,
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        slidesPerGroup: 1,
-      },
-      768: {
-        slidesPerView: 1,
-        slidesPerGroup: 1,
-        pagination: {
-          dynamicMainBullets: 4,
-        },
-      },
-      1200: {
-        slidesPerGroup: 3,
-        spaceBetween: 32,
-      },
-    },
-    navigation: {
-      nextEl: '.news__btn-next',
-      prevEl: '.news__btn-prev',
-    },
-    pagination: {
-      el: '.news__pagination',
-      dynamicBullets: true,
-      dynamicMainBullets: 3,
-      clickable: true,
-      renderBullet: (index, className) => {
-        return '<button class="' + className + '">' + (index + 1) + '</button>';
-      },
-    },
-  });
-};
-
-
-export {initHeroSlider, initProgramsSlider, initReviewsSlider, initNewsSlider};
+export {initHeroSlider, initProgramsSlider, initReviewsSlider};

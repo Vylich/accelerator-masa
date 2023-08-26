@@ -1,0 +1,136 @@
+.news-card {
+  position: relative;
+  height: 400px;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 12px;
+  width: calc((100% - 96px) / 4);
+
+  img {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    border-radius: 12px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.slide-active {
+  width: calc((100% - 32px) / 2);
+}
+
+
+.news-card__content {
+  display: flex;
+  flex-direction: column;
+  max-width: 240px;
+}
+
+
+.news-card__date {
+  background-color: $color-alabaster;
+  width: min-content;
+  border-radius: 0 12px 0 0;
+  padding-top: 5px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    right: -16px;
+    bottom: 0;
+    background-image: url("../img/icons/icon-angle.svg");
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: -16px;
+    background-image: url("../img/icons/icon-angle.svg");
+  }
+
+  span {
+    color: $color-cerulean-blue;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0.12px;
+  }
+}
+
+.news-card__title {
+  background-color: $color-alabaster;
+  border-radius: 0 12px 0 0;
+  max-width: 214px;
+  padding-bottom: 2px;
+  padding-right: 10px;
+  padding-top: 3px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    right: -16px;
+    bottom: 0;
+    background-image: url("../img/icons/icon-angle.svg");
+  }
+
+  h3 {
+    color: $color-cerulean-blue;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 0;
+  }
+}
+
+.news-card__descr {
+  background-color: $color-alabaster;
+  border-radius: 0 12px 0 0;
+  gap: 10px;
+  padding-right: 19px;
+  padding-bottom: 13px;
+  padding-top: 8px;
+  align-items: center;
+  display: flex;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    right: -16px;
+    bottom: 0;
+    background-image: url("../img/icons/icon-angle.svg");
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 18px;
+    white-space: pre-line;
+    margin: 0;
+  }
+}
+
+.slide-active .news-card__content {
+  max-width: 389px;
+}
+
+.slide-active .news-card__title {
+  max-width: 291px;
+  padding-top: 13px;
+}
+
+
+

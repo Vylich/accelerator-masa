@@ -2,6 +2,10 @@
   margin-top: 120px;
 }
 
+.news__container {
+  margin-top: 40px;
+}
+
 .news__wrapper {
   h2 {
     margin: 0;
@@ -18,6 +22,7 @@
   gap: 30px;
   justify-content: center;
   margin-top: 40px;
+  overflow-x: scroll;
 }
 
 .news__btn {
@@ -43,4 +48,34 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  margin-top: 40px;
+}
+
+.news__pagination.swiper-pagination {
+  bottom: 0;
+  gap: 20px;
+  display: flex;
+  justify-content: flex-start;
+  position: initial;
+  width: auto;
+}
+
+.news__pagination .swiper-pagination-bullet {
+  min-width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid $color-cerulean-blue;
+  background-color: transparent;
+  color: $color-cerulean-blue;
+  opacity: 0.5;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.news__pagination .swiper-pagination-bullet-active {
+  background-color: $color-cerulean-blue;
+  color: $color-default-white;
+  opacity: 1;
 }
