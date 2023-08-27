@@ -4,6 +4,10 @@
   @include vp-1199 {
     margin-top: 100px;
   }
+
+  @include vp-767 {
+    margin-top: 67px;
+  }
 }
 
 .conditions__wrapper {
@@ -21,6 +25,11 @@
     display: flex;
     flex-direction: column;
   }
+
+  @include vp-767 {
+    padding-top: 67px;
+    padding-bottom: 67px;
+  }
 }
 
 .conditions__main {
@@ -33,6 +42,11 @@
     @include vp-1199 {
       font-size: 34px;
       line-height: 50px;
+    }
+
+    @include vp-767 {
+      font-size: 20px;
+      line-height: 20px;
     }
   }
 
@@ -47,6 +61,12 @@
     @include vp-1199 {
       line-height: 20px;
       margin-top: 30px;
+      margin-bottom: 40px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      margin-top: 15px;
       margin-bottom: 40px;
     }
   }
@@ -65,6 +85,10 @@
     margin-top: 40px;
   }
 
+  @include vp-767 {
+    margin-top: 30px;
+  }
+
   h3 {
     margin: 0;
     font-size: 32px;
@@ -74,6 +98,11 @@
     @include vp-1199 {
       font-size: 28px;
       line-height: 28px;
+    }
+
+    @include vp-767 {
+      font-size: 18px;
+      line-height: 22px;
     }
   }
 }
@@ -95,6 +124,13 @@
     grid-template-columns: 1fr 1fr;
   }
 
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    padding-left: 15px;
+  }
+
   li {
     position: relative;
     padding: 25px;
@@ -108,6 +144,12 @@
     @include vp-1199 {
       padding: 30px 25px;
       padding-right: 27px;
+    }
+
+    @include vp-767 {
+      padding: 24px 25px;
+      font-size: 14px;
+      line-height: 20px;
     }
   }
 }
@@ -135,6 +177,11 @@
     @include vp-1199 {
       font-size: 22px;
       top: -14px;
+    }
+
+    @include vp-767 {
+      top: -11px;
+      font-size: 18px;
     }
   }
 }

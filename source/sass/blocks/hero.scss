@@ -11,6 +11,10 @@
   z-index: 3;
   padding-bottom: 60px;
 
+  @include vp-767 {
+    padding-bottom: 20px;
+  }
+
   h2 {
     margin: 0;
     font-size: 54px;
@@ -27,6 +31,13 @@
       line-height: 44px;
       padding: 30px 40px 24px;
     }
+
+    @include vp-767 {
+      font-size: 22px;
+      line-height: 26px;
+      border-radius: 0 16px 16px 0;
+      padding: 20px 14px 16px;
+    }
   }
 
   p {
@@ -38,6 +49,30 @@
 
     @include vp-1199 {
       line-height: 20px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 20px;
+      background-color: $color-default-white;
+      padding: 0 14px 15px;
+      border-radius: 0 0 14px 0;
+      position: relative;
+      max-width: none;
+      max-width: 261px;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 20px;
+        right: -20px;
+        top: 0;
+        mask-image: url("../img/icons/icon-angle.svg");
+        background-color: $color-default-white;
+        background-repeat: no-repeat;
+        transform: rotate(90deg);
+      }
     }
   }
 }
@@ -55,6 +90,42 @@
     padding: 0 40px 35px;
     max-width: 591px;
     align-items: center;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    align-items: start;
+    background-color: transparent;
+    padding: 0;
+    width: 100%;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  div {
+    @include vp-767 {
+      background-color: $color-default-white;
+      padding: 10px 15px;
+      border-radius: 0 0 14px 14px;
+      position: relative;
+    }
+
+    &::after {
+      @include vp-767 {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 20px;
+        right: -20px;
+        top: 0;
+        mask-image: url("../img/icons/icon-angle.svg");
+        background-color: $color-default-white;
+        background-repeat: no-repeat;
+        transform: rotate(90deg);
+      }
+    }
   }
 
   &::after {
@@ -83,6 +154,10 @@
 
   @include vp-1199 {
     min-height: 1024px;
+  }
+
+  @include vp-767 {
+    min-height: 568px;
   }
 
   &--internship {
@@ -124,6 +199,10 @@
   height: 38px;
   border-radius: 20px 20px 0 0;
   bottom: 0;
+
+  @include vp-767 {
+    width: 80px;
+  }
 
   &::after {
     position: absolute;

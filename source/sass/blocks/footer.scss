@@ -1,12 +1,27 @@
 .footer {
   padding-bottom: 50px;
   margin-top: 60px;
+
+  @include vp-767 {
+    margin-top: 29px;
+    padding-bottom: 40px;
+  }
 }
 
 .footer__wrapper {
   display: flex;
   flex-direction: column;
   gap: 25px;
+
+  @include vp-1199 {
+    position: relative;
+  }
+
+  @include vp-767 {
+    gap: 0;
+    align-items: center;
+    padding-bottom: 41px;
+  }
 }
 
 .footer__logo {
@@ -26,6 +41,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include vp-1199 {
+    flex-direction: column;
+    align-items: end;
+    width: 100%;
+  }
 }
 
 .footer__menu {
@@ -33,18 +54,46 @@
   align-items: center;
   gap: 52px;
 
+  @include vp-1199 {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
   ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     gap: 30px;
+
+    @include vp-1199 {
+      gap: 15px;
+    }
+
+    @include vp-767 {
+      flex-wrap: wrap;
+      justify-content: center;
+      row-gap: 20px;
+    }
   }
 
   li {
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
+
+    @include vp-1199 {
+      line-height: 20px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+    }
   }
 }
 
@@ -52,6 +101,16 @@
   display: flex;
   list-style: none;
   gap: 20px;
+
+  @include vp-1199 {
+    position: absolute;
+    bottom: 0;
+  }
+
+  @include vp-767 {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .footer__policy {
@@ -59,11 +118,33 @@
   align-items: center;
   justify-content: space-between;
 
+  @include vp-1199 {
+    flex-direction: column;
+    align-items: start;
+    margin-top: 25px;
+  }
+
+  @include vp-767 {
+    margin-top: 20px;
+    flex-direction: column-reverse;
+    gap: 10px;
+    align-items: center;
+  }
+
   p {
     font-size: 14px;
     line-height: 18px;
     font-weight: 400;
     margin: 0;
+
+    @include vp-1199 {
+      opacity: 0.6;
+    }
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 14px;
+    }
   }
 
   a {
@@ -71,5 +152,10 @@
     line-height: 18px;
     font-weight: 400;
     border: 1px;
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 14px;
+    }
   }
 }

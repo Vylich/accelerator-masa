@@ -4,6 +4,10 @@
   @include vp-1199 {
     margin-top: 100px;
   }
+
+  @include vp-767 {
+    margin-top: 67px;
+  }
 }
 
 .news__container {
@@ -11,6 +15,11 @@
 }
 
 .news__wrapper {
+
+  @include vp-767 {
+    overflow: visible;
+  }
+
   h2 {
     margin: 0;
     font-size: 50px;
@@ -23,6 +32,11 @@
       font-size: 34px;
       line-height: 50px;
     }
+
+    @include vp-767 {
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 }
 
@@ -31,11 +45,18 @@
   gap: 30px;
   justify-content: center;
   margin-top: 40px;
-  overflow-x: scroll;
 
   @include vp-1199 {
     margin-top: 30px;
     gap: 9px;
+  }
+
+  @include vp-767 {
+    overflow: scroll;
+    justify-content: flex-start;
+    margin-right: -15px;
+    gap: 12px;
+    margin-top: 24px;
   }
 }
 
@@ -55,6 +76,12 @@
 
   @include vp-1199 {
     padding: 13px 20px;
+  }
+
+  @include vp-767 {
+    padding: 10px 13px;
+    font-size: 12px;
+    line-height: 12px;
   }
 
   &.is-active {
@@ -77,13 +104,17 @@
   justify-content: flex-start;
   position: initial;
   width: auto;
+
+  @include vp-767 {
+    gap: 16px;
+  }
 }
 
 .news__pagination .swiper-pagination-bullet {
   min-width: 32px;
   height: 32px;
   border-radius: 50%;
-  border: 1px solid $color-cerulean-blue;
+  border: 1px solid $color-transparent;
   background-color: transparent;
   color: $color-cerulean-blue;
   opacity: 0.5;
@@ -91,10 +122,29 @@
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 14px;
+    min-width: 26px;
+    height: 26px;
+  }
 }
 
 .news__pagination .swiper-pagination-bullet-active {
   background-color: $color-cerulean-blue;
   color: $color-default-white;
   opacity: 1;
+}
+
+.slide-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 30px;
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+  }
 }
