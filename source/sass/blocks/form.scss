@@ -75,7 +75,7 @@
   p {
     margin: 0;
     color: $color-alabaster;
-    margin-top: 20px;
+    margin-top: 26px;
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
@@ -94,7 +94,7 @@
   }
 
   form {
-    margin-top: 30px;
+    margin-top: 16px;
 
     @include vp-1199 {
       margin-top: 40px;
@@ -112,7 +112,7 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   margin: 0;
 
 }
@@ -129,7 +129,7 @@
 .form__field {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 
   span {
     color: $color-alabaster;
@@ -161,7 +161,7 @@
     outline: none;
     border: 1px solid $color-default-white-opacity;
     border-radius: 8px;
-    height: 98px;
+    height: 101px;
     padding: 16px 25px;
     color: $color-default-white;
     font-size: 14px;
@@ -173,7 +173,8 @@
 .form__policy {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 10px;
+  margin-top: 3px;
 
   @include vp-1199 {
     justify-content: flex-start;
@@ -227,6 +228,7 @@
   span:first-child {
     color: $color-default-white;
     width: 100%;
+    margin-right: 30px;
   }
 
   span:last-child {

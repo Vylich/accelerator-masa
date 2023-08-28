@@ -152,6 +152,7 @@
     line-height: 18px;
     font-weight: 400;
     border: 1px;
+    border-bottom: 1px solid $color-charcoal;
 
     @include vp-767 {
       font-size: 12px;
