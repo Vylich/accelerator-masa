@@ -9,10 +9,10 @@ const initHeroSlider = () => {
 
   new Swiper(heroSliderNode, {
     speed: 300,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: false,
+    // },
     effect: 'fade',
     fadeEffect: {
       crossFade: false,
@@ -137,7 +137,7 @@ const initReviewsSlider = () => {
 
   const swiper = new Swiper(sliderReviews, {
     speed: 300,
-    spaceBetween: 29,
+    spaceBetween: 30,
     slidesPerView: 'auto',
     navigation: {
       nextEl: '.reviews__btn-next',

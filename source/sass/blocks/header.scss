@@ -3,6 +3,10 @@
   position: absolute;
   z-index: 9999;
   width: 100%;
+
+  @include vp-1199 {
+    padding-top: 29px;
+  }
 }
 
 .header__wrapper {
@@ -34,16 +38,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 16px;
   border: 1px solid $color-cerulean-blue;
   background-color: $color-default-white;
   border-radius: 30px;
   display: flex;
-  padding: 4px 4px 4px 20px;
+  padding: 4px 4px 4px 15px;
   transition: width $trans-default;
 
   span {
     color: $color-cerulean-blue;
+    text-transform: uppercase;
+    letter-spacing: 0.28px;
   }
 
   button {
