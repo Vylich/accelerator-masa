@@ -7,6 +7,10 @@
   @include vp-1199 {
     padding-top: 29px;
   }
+
+  @include vp-767 {
+    padding-top: 21px;
+  }
 }
 
 .header__wrapper {
@@ -42,9 +46,13 @@
   border: 1px solid $color-cerulean-blue;
   background-color: $color-default-white;
   border-radius: 30px;
-  display: flex;
   padding: 4px 4px 4px 15px;
   transition: width $trans-default;
+
+  @include vp-767 {
+    padding: 2px 3px 2px 17px;
+    gap: 17px;
+  }
 
   span {
     color: $color-cerulean-blue;

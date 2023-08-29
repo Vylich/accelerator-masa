@@ -6,7 +6,7 @@
   }
 
   @include vp-767 {
-    margin-top: 67px;
+    margin-top: 69px;
   }
 }
 
@@ -21,7 +21,7 @@
   }
 
   @include vp-767 {
-    margin-bottom: 30px;
+    margin-bottom: 33px;
   }
 
   h2 {
@@ -44,7 +44,6 @@
 }
 
 .programs__slider.swiper {
-
   @include vp-1199 {
     overflow: visible;
   }
@@ -74,7 +73,10 @@
     max-width: 324px;
     padding-bottom: 19px;
     height: 420px;
+  }
 
+  @include vp-767 {
+    height: 400px;
   }
 
   @include vp-767 {
@@ -128,6 +130,12 @@
     width: 173px;
   }
 
+  @include vp-767 {
+    width: 146px;
+    padding-top: 17px;
+    padding-bottom: 7px;
+  }
+
   h3 {
     font-size: 24px;
     font-weight: 400;
@@ -139,6 +147,11 @@
       font-size: 20px;
       line-height: 24px;
       width: min-content;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 18px;
     }
   }
 
@@ -170,6 +183,10 @@
     min-height: 79px;
   }
 
+  @include vp-767 {
+    min-height: 69px;
+  }
+
   p {
     margin: 0;
     font-size: 14px;
@@ -178,6 +195,11 @@
 
     @include vp-1199 {
       line-height: 20px;
+    }
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 14px;
     }
   }
 }
@@ -196,7 +218,6 @@
 }
 
 .programs__buttons {
-  position: relative;
   position: relative;
   display: flex;
   gap: 10px;
@@ -255,6 +276,7 @@
     position: absolute;
     bottom: 0;
     padding-left: 30px;
+    gap: 30px;
   }
 }
 

@@ -29,7 +29,6 @@
     @include vp-767 {
       font-size: 20px;
       line-height: 20px;
-
     }
   }
 
@@ -49,7 +48,8 @@
     @include vp-767 {
       font-size: 16px;
       line-height: 22px;
-      margin-top: 15px;
+      margin-top: 14px;
+      padding-right: 20px;
     }
   }
 }
@@ -75,7 +75,7 @@
     }
 
     @include vp-767 {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 22px;
     }
   }
@@ -95,7 +95,7 @@
     @include vp-767 {
       font-size: 14px;
       line-height: 20px;
-      margin-top: 20px;
+      margin-top: 9px;
     }
   }
 }
@@ -116,15 +116,14 @@
 
 .about__btn {
   margin-top: 32px;
-  padding-left: 30px;
-  gap: 30px;
 
   @include vp-1199 {
     margin-top: 35px;
   }
 
   @include vp-767 {
-    margin-top: 30px;
+    margin-top: 26px;
+    margin-right: 69px;
   }
 }
 
@@ -144,7 +143,7 @@
   padding-bottom: 52px;
 
   @include vp-1199 {
-    padding:61px 40px 41px 60px;
+    padding: 61px 40px 41px 60px;
     row-gap: 42px;
   }
 
@@ -154,6 +153,48 @@
     padding: 42px 20px 40px;
     margin-top: 40px;
     gap: 22px;
+  }
+}
+
+.about__info .about__item:first-child {
+  p {
+    max-width: 178px;
+  }
+
+  span {
+    max-width: 144px;
+  }
+}
+
+.about__info .about__item:last-child {
+  p {
+    max-width: 164px;
+  }
+
+  span {
+    max-width: 162px;
+  }
+}
+
+.about__info .about__item:nth-last-child(2) {
+  padding-right: 47px;
+
+  p {
+    max-width: 190px;
+  }
+
+  span {
+    max-width: 134px;
+  }
+}
+
+.about__info .about__item:nth-child(2) {
+  p {
+    max-width: 167px;
+  }
+
+  span {
+    max-width: 171px;
   }
 }
 
@@ -171,9 +212,8 @@
   }
 
   @include vp-767 {
-    margin-left: 20px;
-    padding: 24px 20px;
-    padding-right: 9px;
+    margin-left: 10px;
+    padding: 19px 9px 24px 20px;
     align-items: start;
   }
 
@@ -192,7 +232,7 @@
     @include vp-767 {
       font-size: 16px;
       line-height: 20px;
-      letter-spacing: 0px;
+      letter-spacing: 0.16px;
     }
   }
 
@@ -208,9 +248,11 @@
     }
 
     @include vp-767 {
-      margin-top: 8px;
+      margin-top: 3px;
+      margin-left: -1px;
       font-size: 14px;
       line-height: 20px;
+      padding-right: 34px;
     }
   }
 

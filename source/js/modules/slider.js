@@ -1,5 +1,4 @@
 import Swiper from '../vendor/swiper.js';
-import {createNews} from './init-news.js';
 
 const heroSliderNode = document.querySelector('.hero');
 const programsSliderNode = document.querySelector('.programs__slider');
@@ -9,10 +8,10 @@ const initHeroSlider = () => {
 
   new Swiper(heroSliderNode, {
     speed: 300,
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     effect: 'fade',
     fadeEffect: {
       crossFade: false,

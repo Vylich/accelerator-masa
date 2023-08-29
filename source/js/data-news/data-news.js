@@ -6,7 +6,7 @@ export const newsData = [
     date: '23/03/2023',
     title: 'Интервью с участницей программы стажировки',
     webp: 'img/news/news-interview.webp 1x, img/news/news-interview@2x.webp 2x',
-    text: 'Саша рассказывает, как попала в\u00A0программу и\u00A0как прошла 6-месячная стажировка в\u00A0ISOFound',
+    text: 'Саша рассказывает, как попала в\u00A0программу и\u00A0как\u00A0прошла 6\u2013 месячная стажировка в\u00A0ISOFound',
   },
   {
     type: 'trips',

@@ -27,7 +27,7 @@
   }
 
   @include vp-767 {
-    padding-top: 67px;
+    padding-top: 68px;
     padding-bottom: 67px;
   }
 }
@@ -67,8 +67,9 @@
 
     @include vp-767 {
       font-size: 14px;
-      margin-top: 15px;
-      margin-bottom: 40px;
+      margin-top: 14px;
+      margin-bottom: 25px;
+      padding-right: 0;
     }
   }
 
@@ -77,17 +78,25 @@
 
     @include vp-1199 {
       width: 100%;
+      height: 375px;
+      object-fit: cover;
+    }
+
+    @include vp-767 {
+      height: 200px;
     }
   }
 }
 
 .conditions__info {
+  margin-top: 9px;
+
   @include vp-1199 {
-    margin-top: 40px;
+    margin-top: 46px;
   }
 
   @include vp-767 {
-    margin-top: 30px;
+    margin-top: 35px;
   }
 
   h3 {
@@ -95,7 +104,6 @@
     font-size: 32px;
     font-weight: 400;
     line-height: 36px;
-    margin-top: 9px;
 
     @include vp-1199 {
       font-size: 28px;
@@ -121,42 +129,43 @@
   counter-reset: conditions;
 
   @include vp-1199 {
-    margin-top: 35px;
+    margin-top: 42px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 46px;
+    row-gap: 25px;
   }
 
   @include vp-767 {
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 26px;
     padding-left: 15px;
-  }
-
-  li {
-    position: relative;
-    padding: 22px 62px 22px 25px;
-    padding-right: 62px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 26px;
-    border-radius: 16px;
-    border: 1px solid $color-default-white;
-
-    @include vp-1199 {
-      padding: 30px 25px;
-      padding-right: 27px;
-    }
-
-    @include vp-767 {
-      padding: 24px 25px;
-      font-size: 14px;
-      line-height: 20px;
-    }
+    gap: 15px;
   }
 }
 
 .conditions__list li {
+  position: relative;
+  padding: 22px 62px 22px 25px;
+  padding-right: 62px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  border-radius: 16px;
+  border: 1px solid $color-default-white;
+
+  @include vp-1199 {
+    padding: 25px 27px 25px 24px;
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    padding: 17px 24px 19px 24px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
   &::after {
     counter-increment: conditions;
     content: counter(conditions);
@@ -164,7 +173,6 @@
     color: $color-default-white;
     width: 42px;
     height: 42px;
-    position: absolute;
     background-color: $color-cerulean-blue;
     display: flex;
     align-items: center;
@@ -179,12 +187,15 @@
 
     @include vp-1199 {
       font-size: 22px;
-      top: -14px;
+      top: -17px;
     }
 
     @include vp-767 {
-      top: -11px;
+      top: -7px;
       font-size: 18px;
+      left: -13px;
+      width: 26px;
+      height: 32px;
     }
   }
 }

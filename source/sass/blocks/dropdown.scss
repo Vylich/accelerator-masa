@@ -65,6 +65,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 16px 25px;
+
+  @include vp-1199 {
+    padding-right: 20px;
+  }
 }
 
 .dropdown__text {

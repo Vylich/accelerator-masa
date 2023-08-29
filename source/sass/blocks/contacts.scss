@@ -12,8 +12,8 @@
   }
 
   @include vp-767 {
-    margin-top: 67px;
-    padding-top: 67px;
+    margin-top: 57px;
+    padding-top: 69px;
     padding-bottom: 67px;
   }
 }
@@ -39,12 +39,12 @@
   @include vp-1199 {
     flex-direction: column;
     align-items: start;
-    padding-bottom: 31px;
+    padding-bottom: 25px;
     margin-bottom: 30px;
   }
 
   @include vp-767 {
-    padding-bottom: 30px;
+    padding-bottom: 23px;
   }
 
   h2 {
@@ -56,6 +56,7 @@
 
     @include vp-1199 {
       font-size: 34px;
+      margin-bottom: 0;
     }
 
     @include vp-767 {
@@ -72,7 +73,7 @@
   gap: 51px;
 
   @include vp-1199 {
-    margin-top: 30px;
+    margin-top: 29px;
     gap: 0;
     justify-content: space-between;
     width: 100%;
@@ -80,7 +81,8 @@
 
   @include vp-767 {
     flex-direction: column;
-    gap: 20px;
+    gap: 12px;
+    margin-top: 30px;
   }
 
   p {
@@ -89,9 +91,14 @@
     font-weight: 400;
     line-height: 26px;
 
+    @include vp-1199 {
+      line-height: 20px;
+      margin-top: 4px;
+    }
+
     @include vp-767 {
       font-size: 14px;
-      line-height: 20px;
+      margin-top: 0;
     }
   }
 
@@ -113,7 +120,7 @@
     gap: 15px;
 
     @include vp-767 {
-      gap: 15px;
+      gap: 10px;
     }
 
     span:first-child {

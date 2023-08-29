@@ -2,18 +2,16 @@
   margin-top: 120px;
 
   @include vp-1199 {
-    margin-top: 100px;
+    margin-top: 96px;
   }
 
   @include vp-767 {
-    margin-top: 67px;
+    margin-top: 69px;
   }
 }
 
 .reviews__wrapper {
-  @include vp-1199 {
-    overflow: visible;
-  }
+  overflow: visible;
 
   @include vp-767 {
     position: relative;
@@ -29,6 +27,7 @@
 
     @include vp-1199 {
       font-size: 34px;
+      margin-left: 0;
     }
 
     @include vp-767 {
@@ -41,17 +40,20 @@
 .reviews__container {
   margin-bottom: 10px;
   margin-top: 44px;
+  overflow: visible;
 
   @include vp-1199 {
-    margin-top: 40px;
-    overflow: visible;
+    margin-top: 39px;
+  }
+
+  @include vp-767 {
+    overflow: hidden;
+    margin-top: 33px;
   }
 }
 
 .reviews__slider {
-  @include vp-1199 {
-    overflow: visible;
-  }
+  overflow: visible;
 }
 
 .reviews__item {
@@ -64,10 +66,11 @@
 
   @include vp-1199 {
     max-width: 560px;
+    padding: 50px 49px 46px;
   }
 
   @include vp-767 {
-    padding: 30px 15px;
+    padding: 30px 14px 25px;
   }
 
   h4 {
@@ -81,6 +84,7 @@
     @include vp-1199 {
       font-size: 20px;
       line-height: 24px;
+      margin-top: 23px;
     }
 
     @include vp-767 {
@@ -99,12 +103,13 @@
 
     @include vp-1199 {
       line-height: 20px;
+      margin-top: 17px;
     }
 
     @include vp-767 {
       font-size: 14px;
       line-height: 20px;
-      margin-top: 20px;
+      margin-top: 15px;
     }
   }
 }
@@ -113,6 +118,10 @@
   display: flex;
   align-items: center;
   gap: 15px;
+
+  @include vp-767 {
+    gap: 10px;
+  }
 
   p {
     font-size: 18px;
@@ -125,6 +134,7 @@
 
     @include vp-1199 {
       font-size: 20px;
+      margin-bottom: 3px;
     }
 
     @include vp-767 {
@@ -157,8 +167,14 @@
   gap: 25px;
   margin-bottom: 10px;
 
+  @include vp-1199 {
+    margin-right: 1px;
+    gap: 26px;
+  }
+
   @include vp-767 {
-    margin-top: 15px;
+    margin-top: 5px;
+    margin-bottom: 0;
   }
 
   span {
@@ -179,12 +195,12 @@
     @include vp-767 {
       font-size: 12px;
       line-height: 14px;
+      margin-top: 1px;
     }
   }
 }
 
 .reviews__buttons {
-  position: relative;
   position: relative;
   display: flex;
   gap: 10px;
@@ -193,7 +209,7 @@
   margin-top: 28px;
 
   @include vp-1199 {
-    margin-top: 30px;
+    margin-top: 38px;
   }
 
   @include vp-767 {
@@ -201,7 +217,6 @@
     position: absolute;
     top: 0;
     right: 15px;
-
   }
 }
 

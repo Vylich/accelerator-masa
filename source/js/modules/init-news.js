@@ -20,9 +20,6 @@ const initNewsSlider = () => {
       768: {
         slidesPerView: 1,
         slidesPerGroup: 1,
-        pagination: {
-          dynamicMainBullets: 4,
-        },
       },
       1200: {
         slidesPerView: 'auto',
@@ -37,6 +34,7 @@ const initNewsSlider = () => {
     pagination: {
       el: '.news__pagination',
       clickable: true,
+      dynamicMainBullets: 4,
       renderBullet: (index, className) => {
         return '<button class="' + className + '">' + (index + 1) + '</button>';
       },
