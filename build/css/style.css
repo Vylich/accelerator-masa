@@ -3812,6 +3812,10 @@ button,
   border-color: #275699;
 }
 
+.social svg {
+  color: #ffffff;
+}
+
 .social a {
   width: 36px;
   height: 36px;
@@ -3839,10 +3843,6 @@ button,
 
 .social a.focus-visible:active svg {
   opacity: 1;
-}
-
-.social svg {
-  color: #ffffff;
 }
 
 .about {
@@ -6534,10 +6534,6 @@ span.modal__error {
     height: 34px;
   }
 
-  .modal--fit-content .modal__content {
-    width: 100%;
-  }
-
   .modal__wrapper {
     padding: 56px 15px;
   }
@@ -6812,6 +6808,11 @@ span.modal__error {
     line-height: 14px;
   }
 
+  .social svg {
+    width: 12px;
+    height: 12px;
+  }
+
   .social a {
     width: 26px;
     height: 26px;
@@ -6822,11 +6823,6 @@ span.modal__error {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-  }
-
-  .social svg {
-    width: 12px;
-    height: 12px;
   }
 
   .about {

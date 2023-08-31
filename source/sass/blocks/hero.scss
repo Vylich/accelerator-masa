@@ -65,20 +65,22 @@
       border-radius: 0 0 14px 0;
       position: relative;
       max-width: 261px;
-
-      &::after {
-        position: absolute;
-        content: "";
-        width: 20px;
-        height: 20px;
-        right: -20px;
-        top: 0;
-        mask-image: url("../img/icons/icon-angle.svg");
-        background-color: $color-default-white;
-        background-repeat: no-repeat;
-        transform: rotate(90deg);
-      }
     }
+  }
+}
+
+.hero__content p::after {
+  @include vp-767 {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    right: -20px;
+    top: 0;
+    mask-image: url("../img/icons/icon-angle.svg");
+    background-color: $color-default-white;
+    background-repeat: no-repeat;
+    transform: rotate(90deg);
   }
 }
 
@@ -128,21 +130,6 @@
       border-radius: 0 0 14px 14px;
       position: relative;
     }
-
-    &::after {
-      @include vp-767 {
-        position: absolute;
-        content: "";
-        width: 20px;
-        height: 20px;
-        right: -20px;
-        top: 0;
-        mask-image: url("../img/icons/icon-angle.svg");
-        background-color: $color-default-white;
-        background-repeat: no-repeat;
-        transform: rotate(90deg);
-      }
-    }
   }
 
   &::after {
@@ -152,6 +139,21 @@
     height: 20px;
     right: -20px;
     top: 6px;
+    mask-image: url("../img/icons/icon-angle.svg");
+    background-color: $color-default-white;
+    background-repeat: no-repeat;
+    transform: rotate(90deg);
+  }
+}
+
+.hero__descr div::after {
+  @include vp-767 {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    right: -20px;
+    top: 0;
     mask-image: url("../img/icons/icon-angle.svg");
     background-color: $color-default-white;
     background-repeat: no-repeat;
