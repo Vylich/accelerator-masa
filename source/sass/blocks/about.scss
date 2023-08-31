@@ -156,7 +156,7 @@
   }
 }
 
-.about__info .about__item:first-child {
+.about__item:first-child {
   p {
     max-width: 178px;
 
@@ -174,7 +174,7 @@
   }
 }
 
-.about__info .about__item:last-child {
+.about__item:last-child {
   p {
     max-width: 164px;
 
@@ -192,7 +192,7 @@
   }
 }
 
-.about__info .about__item:nth-last-child(2) {
+.about__item:nth-child(3n) {
   padding-right: 47px;
 
   p {
@@ -212,7 +212,7 @@
   }
 }
 
-.about__info .about__item:nth-child(2) {
+.about__item:nth-last-child(3n) {
   p {
     max-width: 167px;
 

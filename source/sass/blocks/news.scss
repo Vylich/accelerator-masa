@@ -203,7 +203,7 @@
   }
 }
 
-.slide-grid .news-card:nth-last-child(2) {
+.slide-grid .news-card:nth-child(3n) {
   @include vp-1199 {
     order: 4;
   }
@@ -213,7 +213,7 @@
   }
 }
 
-.slide-grid .news-card:nth-child(2) {
+.slide-grid .news-card:nth-last-child(3n) {
   @include vp-1199 {
     order: 3;
   }
