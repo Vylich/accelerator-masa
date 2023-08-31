@@ -14,14 +14,17 @@ const initNewsSlider = () => {
     spaceBetween: 30,
     breakpoints: {
       320: {
+        allowTouchMove: true,
         slidesPerView: 1,
         slidesPerGroup: 1,
       },
       768: {
+        allowTouchMove: true,
         slidesPerView: 1,
         slidesPerGroup: 1,
       },
       1200: {
+        allowTouchMove: false,
         slidesPerView: 'auto',
         slidesPerGroup: 3,
         spaceBetween: 32,

@@ -153,23 +153,43 @@
       line-height: 14px;
     }
   }
+}
 
-  a {
-    font-size: 14px;
-    line-height: 18px;
-    font-weight: 400;
-    border: 1px;
-    border-bottom: 1px solid $color-charcoal;
+.footer__menu a {
+  @include hover-focus {
+    color: $color-cerulean-blue;
+  }
 
-    @include vp-1199 {
-      font-size: 12px;
-      line-height: 12px;
-      padding-bottom: 1px;
-    }
+  @include active {
+    color: $color-endeavuor;
+  }
+}
 
-    @include vp-767 {
-      font-size: 12px;
-      line-height: 14px;
-    }
+.footer__policy a {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  border: 1px;
+  border-bottom: 1px solid $color-charcoal;
+
+  @include vp-1199 {
+    font-size: 12px;
+    line-height: 12px;
+    padding-bottom: 1px;
+  }
+
+  @include vp-767 {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  @include hover-focus {
+    color: $color-cerulean-blue;
+    border-color: $color-cerulean-blue;
+  }
+
+  @include active {
+    color: $color-endeavuor;
+    border-color: $color-endeavuor;
   }
 }

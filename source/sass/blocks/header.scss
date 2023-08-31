@@ -67,10 +67,38 @@
     background-color: $color-cerulean-blue;
     outline: none;
     border: 1px solid $color-transparent;
-    background-image: url("../img/icons/icon-menu.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
     cursor: pointer;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      mask-image: url("../img/icons/icon-menu.svg");
+      mask-repeat: no-repeat;
+      mask-position: center center;
+      background-color: $color-default-white;
+      width: 18px;
+      height: 10px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      mask-image: url("../img/icons/btn-icon-cross.svg");
+      mask-repeat: no-repeat;
+      mask-position: center center;
+      background-color: $color-cerulean-blue;
+      width: 16px;
+      height: 16px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+    }
   }
 }
 
@@ -84,5 +112,26 @@
   svg {
     width: 28px;
     height: 28px;
+  }
+}
+
+
+.header__button.is-active {
+  background-color: $color-cerulean-blue;
+
+  span {
+    color: $color-default-white;
+  }
+
+  button {
+    background-color: $color-default-white;
+
+    &::after {
+      opacity: 0;
+    }
+
+    &::before {
+      opacity: 1;
+    }
   }
 }

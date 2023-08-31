@@ -4,85 +4,24 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1000;
-
+  z-index: 9999;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-
-  background-color: rgba($color-default-black, 0.8);
+  background-color: $overlay-form;
   transform: scale(1.2);
   visibility: hidden;
   opacity: 0;
-
   transition: opacity $trans-modal,
     transform $trans-modal,
     visibility $trans-modal;
-
   pointer-events: none;
-
   -ms-overflow-style: none;
   scrollbar-width: none;
 
   &::-webkit-scrollbar {
     display: none;
-  }
-
-  &__wrapper {
-    position: relative;
-
-    display: flex;
-    flex-shrink: 0;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 100%;
-    padding: 60px 40px;
-
-    @include vp-767 {
-      padding: 60px 16px;
-    }
-  }
-
-  &__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    cursor: pointer;
-  }
-
-  &__content {
-    position: relative;
-
-    width: 600px;
-    padding: 40px;
-
-    background-color: $color-default-white;
-
-    @include vp-767 {
-      width: 100%;
-      padding: 20px;
-    }
-  }
-
-  &__close-btn {
-    position: absolute;
-    top: 22px;
-    right: 22px;
-    z-index: 1;
-
-    width: 40px;
-    height: 40px;
-    padding: 0;
-
-    background: $color-transparent;
-    border: none;
-    cursor: pointer;
   }
 
   &--responsive {
@@ -115,5 +54,311 @@
     opacity: 1;
 
     pointer-events: auto;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 18px;
+    align-items: center;
+    width: 100%;
+
+    @include vp-1199 {
+      margin-top: 21px;
+    }
+  }
+}
+
+.modal__wrapper {
+  position: relative;
+
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 60px 40px;
+
+  @include vp-767 {
+    padding: 56px 15px;
+  }
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.modal__content {
+  position: relative;
+  max-width: 510px;
+  padding: 54px 80px 58px;
+  border-radius: 16px;
+  background-color: $color-default-white;
+  margin-bottom: 11px;
+
+  @include vp-1199 {
+    padding-top: 55px;
+    margin-bottom: 14px;
+  }
+
+  @include vp-767 {
+    height: 521px;
+    padding: 40px 15px;
+    padding-top: 37px;
+  }
+
+  h3 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: center;
+    color: $color-cerulean-blue;
+    margin: 0;
+
+    @include vp-1199 {
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    @include vp-767 {
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: center;
+    margin: 0;
+    margin-top: 7px;
+
+    @include vp-1199 {
+      font-size: 16px;
+      line-height: 20px;
+      margin-top: 13px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      margin-top: 7px;
+      padding: 0 25px;
+    }
+  }
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 31px;
+  right: 33px;
+  z-index: 1;
+
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  mask-image: url("../img/icons/btn-icon-cross.svg");
+  mask-size: contain;
+  background: $color-cerulean-blue;
+  border: none;
+  cursor: pointer;
+
+  @include vp-767 {
+    top: 22px;
+    right: 22px;
+    width: 12px;
+    height: 12px;
+  }
+}
+
+
+.modal__fieldset {
+  border: none;
+  outline: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+  width: 100%;
+
+  @include vp-767 {
+    gap: 15px;
+  }
+}
+
+.modal__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  span {
+    color: $color-charcoal;
+    opacity: 0.8;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+
+  input {
+    background-color: $color-transparent;
+    outline: none;
+    border: 1px solid $color-charcoal-opacity;
+    border-radius: 8px;
+    height: 50px;
+    padding: 16px 25px;
+    color: $color-charcoal;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+
+    @include vp-767 {
+      height: 44px;
+    }
+  }
+}
+
+.modal__sity-wrap {
+  border: $color-charcoal-opacity 1px solid;
+  border-radius: 8px;
+
+  @include vp-767 {
+    height: 44px;
+  }
+}
+
+
+.modal__policy {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 3px;
+
+  @include vp-1199 {
+    justify-content: flex-start;
+  }
+
+  @include vp-767 {
+    align-items: start;
+  }
+
+  span:last-child {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    color: $color-charcoal;
+
+    @include vp-767 {
+      line-height: 14px;
+      margin-top: -3px;
+    }
+  }
+}
+
+.modal__checkbox {
+  border-radius: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: $color-transparent;
+  border: 1px solid $color-charcoal-opacity;
+  cursor: pointer;
+
+  @include vp-767 {
+    min-width: 20px;
+  }
+}
+
+.modal__input-checkbox:checked + .modal__checkbox {
+  background-color: $color-cerulean-blue;
+  border: 1px solid $color-cerulean-blue;
+}
+
+.modal__btn {
+  margin-top: 30px;
+
+  @include vp-767 {
+    margin-top: 25px;
+    width: 100%;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  span:first-child {
+    @include vp-767 {
+      width: 100%;
+      margin-right: 21px;
+    }
+  }
+
+  span:last-child {
+    @include vp-767 {
+      min-width: 34px;
+    }
+  }
+}
+
+.modal__sity {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+
+  @include vp-1199 {
+    gap: 9px;
+  }
+
+  @include vp-767 {
+    margin-top: 0;
+    gap: 8px;
+  }
+
+  span {
+    color: $color-charcoal;
+    opacity: 0.8;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+}
+
+.modal .field {
+  input,
+  textarea,
+  .form__checkbox,
+  .form__sity-wrap,
+  .modal__sity-wrap,
+  .modal__checkbox {
+    &:disabled {
+      opacity: 0.6;
+      background-color: $color-default-white-opacity;
+    }
+
+    @include hover-focus {
+      border-color: $color-charcoal;
+    }
+
+    @include active {
+      border-color: $color-charcoal;
+    }
   }
 }

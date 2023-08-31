@@ -159,20 +159,36 @@
 .about__info .about__item:first-child {
   p {
     max-width: 178px;
+
+    @include vp-1199 {
+      max-width: 100%;
+    }
   }
 
   span {
     max-width: 144px;
+
+    @include vp-1199 {
+      max-width: 100%;
+    }
   }
 }
 
 .about__info .about__item:last-child {
   p {
     max-width: 164px;
+
+    @include vp-1199 {
+      max-width: 100%;
+    }
   }
 
   span {
     max-width: 162px;
+
+    @include vp-1199 {
+      max-width: 100%;
+    }
   }
 }
 
@@ -181,20 +197,36 @@
 
   p {
     max-width: 190px;
+
+    @include vp-1199 {
+      max-width: 100%;
+    }
   }
 
   span {
     max-width: 134px;
+
+    @include vp-1199 {
+      max-width: 100%;
+    }
   }
 }
 
 .about__info .about__item:nth-child(2) {
   p {
     max-width: 167px;
+
+    @include vp-1199 {
+      max-width: 100%;
+    }
   }
 
   span {
     max-width: 171px;
+
+    @include vp-1199 {
+      max-width: 100%;
+    }
   }
 }
 
@@ -242,9 +274,11 @@
     font-weight: 300;
     line-height: 20px;
     color: $color-alabaster;
+    margin-left: 10px;
 
     @include vp-1199 {
       margin-top: 8px;
+      margin-left: 0;
     }
 
     @include vp-767 {

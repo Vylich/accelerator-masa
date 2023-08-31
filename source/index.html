@@ -7,6 +7,31 @@
     <meta name="description" content="Проект аккселератора" />
     <title>Masa</title>
     <link rel="stylesheet" href="css/style.min.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/favicons/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="img/favicons/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
   </head>
   <body>
     <div class="wrapper">
@@ -383,7 +408,7 @@
                 srcset="img/content/img-waymark@2x.jpg 2x"
                 width="498"
                 height="363"
-                alt="Стажировки."
+                alt="Дорожный указатель"
               />
             </picture>
           </div>
@@ -538,7 +563,7 @@
                         loading="lazy"
                         src="img/reviews/sarah.png"
                         srcset="img/reviews/sarah@2x.png"
-                        alt="Аватар."
+                        alt="Аватар"
                         width="90"
                         height="90"
                       />
@@ -584,7 +609,7 @@
                         loading="lazy"
                         src="img/reviews/david.png"
                         srcset="img/reviews/david@2x.png"
-                        alt="Аватар."
+                        alt="Аватар"
                         width="90"
                         height="90"
                       />
@@ -630,7 +655,7 @@
                         loading="lazy"
                         src="img/reviews/sarah.png"
                         srcset="img/reviews/sarah@2x.png"
-                        alt="Аватар."
+                        alt="Аватар"
                         width="90"
                         height="90"
                       />
@@ -676,7 +701,7 @@
                         loading="lazy"
                         src="img/reviews/david.png"
                         srcset="img/reviews/david@2x.png"
-                        alt="Аватар."
+                        alt="Аватар"
                         width="90"
                         height="90"
                       />
@@ -767,7 +792,7 @@
                 loading="lazy"
                 src="img/content/img-beach.jpg"
                 srcset="img/content/img-beach@2x.jpg"
-                alt="Фон."
+                alt="Изображение пляжа"
                 width="1240"
                 height="803"
               />
@@ -780,25 +805,25 @@
               </p>
               <form action="#" method="post">
                 <fieldset class="form__fieldset">
-                  <label class="form__field">
+                  <label class="form__field field">
                     <span> Имя </span>
-                    <input type="text" name="name" autocomplete="off" />
+                    <input type="text" name="name" id="name-modal" required autocomplete="off" data-pristine-required-message="Пожалуйста введите свое Имя"/>
                   </label>
-                  <label class="form__field">
+                  <label class="form__field field">
                     <span> Телефон </span>
-                    <input type="text" name="name" autocomplete="off" />
+                    <input type="text" name="name" required data-phone-pattern autocomplete="off" data-pristine-required-message="Пожалуйста введите свой телефон"/>
                   </label>
-                  <label class="form__field">
+                  <label class="form__field field">
                     <span> Ваше сообщение </span>
-                    <textarea name="message" id="form-message"></textarea>
+                    <textarea name="message" required data-pristine-required-message="Напишите сообщение" id="form-message"></textarea>
                   </label>
-                  <div class="form__sity">
+                  <div class="form__sity field">
                     <span>Выберите город</span>
                     <div class="form__sity-wrap">
                       <div class="form__sity-dropdown dropdown">
                         <div class="dropdown__text-wrap">
                           <span class="dropdown__text"></span>
-                          <button type="button" class="dropdown__btn"></button>
+                          <button type="button" data-select class="dropdown__btn"></button>
                         </div>
                         <ul class="dropdown__list" tabindex="1">
                           <li
@@ -818,20 +843,23 @@
                           </li>
                         </ul>
                       </div>
-                      <select
+                      <label class="form__field">
+                        <select
                         class="form__sity-select visually-hidden"
                         required
+                        data-pristine-required-message="Пожалуйста выберите Город"
                       >
-                        <option value="">Выберите город</option>
+                        <option value="" selected hidden>Выберите город</option>
                         <option value="Санкт-Петербург">Санкт-Петербург</option>
                         <option value="Москва">Москва</option>
                         <option value="Казань">Казань</option>
                         <option value="Оренбург">Оренбург</option>
                       </select>
+                      </label>
                     </div>
                   </div>
 
-                  <label for="form-policy" class="form__policy">
+                  <label for="form-policy" class="form__policy field">
                     <input
                       class="form__input-checkbox visually-hidden"
                       type="checkbox"
@@ -904,101 +932,99 @@
         </div>
       </footer>
     </div>
-
-    <div class="modal modal--preload" data-modal="feedback">
+    <div class="modal modal--preload" data-modal="question">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
+          <h3>Напишите нам</h3>
+          <p>
+            Оставьте ваши контакты, если&nbsp;у вас остались вопросы&nbsp;– мы на
+            них ответим!
+          </p>
           <button
             class="modal__close-btn btn-reset"
             type="button"
             aria-label="Закрыть попап"
             data-close-modal
           >
-            <svg width="22" height="22">
-              <use xlink:href="img/sprite/sprite.svg#close"></use>
-            </svg>
           </button>
-          <div class="modal__header">
-            <h3>Напишите нам</h3>
-            <p>
-              Оставьте ваши контакты, если у вас остались вопросы&nbsp;– мы на
-              них ответим!
-            </p>
-          </div>
-          <div class="modal__fields">
-            <div
-              class="modal__form"
-              data-form-validate="data-form-validate"
-              data-callback="base"
-            >
-              <form action="#" method="post">
-                <div
-                  data-validate-type="text"
-                  data-limitation="name"
-                  class="modal__field"
-                  data-required="data-required"
-                >
-                  <label for="name">Имя</label>
-                  <input type="text" name="name" id="name" />
-                </div>
-                <div
-                  class="modal__field"
-                  data-validate-type="phone"
-                  data-required="data-required"
-                >
-                  <label for="tel">Телефон</label>
-                  <input type="text" name="tel" id="tel" />
-                </div>
-                <div
-                  class="modal__field field-cities"
-                  data-validate-type="text"
-                  data-required="data-required"
-                >
-                  <label for="city">Выберите город</label>
-                  <input
-                    class="input-cities"
-                    type="text"
-                    name="city"
-                    id="city"
-                    readonly
-                  />
-                  <span>
-                    <svg width="10" height="10">
-                      <use xlink:href="img/sprite/sprite.svg#icon-plus"></use>
-                    </svg>
-                  </span>
-                  <div class="field-cities-select">
-                    <button type="button">Санкт-Петербург</button>
-                    <button type="button">Москва</button>
-                    <button type="button">Казань</button>
-                    <button type="button">Сочи</button>
+          <form action="#" method="post">
+            <fieldset class="modal__fieldset">
+              <label class="modal__field field">
+                <span> Имя </span>
+                <input type="text" name="name" id="name" required autocomplete="off" data-pristine-required-message="Пожалуйста введите свое Имя"/>
+              </label>
+              <label class="modal__field field">
+                <span> Телефон </span>
+                <input type="text" name="phone" required data-phone-pattern autocomplete="off" data-pristine-required-message="Пожалуйста введите свой Телефон"/>
+              </label>
+              <div class="modal__sity field">
+                <span>Выберите город</span>
+                <div class="modal__sity-wrap">
+                  <div class="modal__sity-dropdown dropdown-modal">
+                    <div class="dropdown-modal__text-wrap">
+                      <span class="dropdown-modal__text"></span>
+                      <button type="button" data-select class="dropdown-modal__btn"></button>
+                    </div>
+                    <ul class="dropdown-modal__list" tabindex="1">
+                      <li
+                        class="dropdown-modal__item"
+                        data-value="Санкт-Петербург"
+                      >
+                        Санкт-Петербург
+                      </li>
+                      <li class="dropdown-modal__item" data-value="Москва">
+                        Москва
+                      </li>
+                      <li class="dropdown-modal__item" data-value="Казань">
+                        Казань
+                      </li>
+                      <li class="dropdown-modal__item" data-value="Оренбург">
+                        Оренбург
+                      </li>
+                    </ul>
                   </div>
-                </div>
-                <div
-                  data-validate-type="checkbox"
-                  data-required="data-required"
-                  class="modal__policy"
-                >
-                  <input type="checkbox" name="policy" id="policy" required />
-                  <span></span>
-                  <label for="policy"
-                    >Я согласен на обработку моих персональных данных</label
+                  <select
+                    class="modal__sity-select visually-hidden"
+                    required
+                    id="sity"
+                    data-pristine-required-message="Пожалуйста выберите город из списка"
+
                   >
+                    <option value="" selected hidden>Выберите город</option>
+                    <option value="Санкт-Петербург">Санкт-Петербург</option>
+                    <option value="Москва">Москва</option>
+                    <option value="Казань">Казань</option>
+                    <option value="Оренбург">Оренбург</option>
+                  </select>
                 </div>
-                <button class="modal__btn btn" type="submit">
-                  отправить
-                  <span class="btn-content">
-                    <svg width="10" height="10">
-                      <use
-                        xlink:href="img/sprite/sprite.svg#button-arrow"
-                      ></use>
-                    </svg>
-                  </span>
-                </button>
-              </form>
-            </div>
-          </div>
+              </div>
+
+              <label for="modal-policy" class="modal__policy field">
+                <input
+                  class="modal__input-checkbox visually-hidden"
+                  type="checkbox"
+                  name="policy"
+                  id="modal-policy"
+                  required
+                />
+                <span class="modal__checkbox"></span>
+                <span
+                  >Я согласен на обработку моих персональных данных</span
+                >
+              </label>
+            </fieldset>
+            <button class="modal__btn btn" type="submit">
+              <span>отправить</span>
+              <span>
+                <svg width="10" height="10">
+                  <use
+                    xlink:href="img/sprite/sprite.svg#button-arrow"
+                  ></use>
+                </svg>
+              </span>
+            </button>
+          </form>
         </div>
       </div>
     </div>
@@ -1010,7 +1036,7 @@
             src=""
             srcset=""
             loading="lazy"
-            alt="Новость."
+            alt="Новость"
             width="286"
             height="400"
           />

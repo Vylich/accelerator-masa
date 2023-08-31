@@ -10,7 +10,7 @@
   letter-spacing: 0.28px;
   font-size: 14px;
   line-height: 14px;
-  transition: opacity $trans-default;
+  transition: background-color $trans-default;
 
   @include vp-767 {
     font-size: 12px;
@@ -20,17 +20,46 @@
   }
 
   &:disabled {
-    opacity: 0.5;
+    border: 1px solid $color-mischka;
     pointer-events: none;
+
+    span:first-child {
+      color: $color-mischka;
+    }
+
+    span:last-child {
+      background-color: $color-mischka;
+    }
   }
 
   @include hover-focus {
-    opacity: 0.8;
+    outline: none;
+    background-color: $color-cerulean-blue;
+
+    span:first-child {
+      color: $color-default-white;
+    }
+
+    span:last-child {
+      background-color: $color-default-white;
+    }
+
+    svg {
+      color: $color-cerulean-blue;
+      transform: rotate(45deg);
+    }
+  }
+
+  @include active {
+    span:first-child {
+      opacity: 0.7;
+    }
   }
 
   span:first-child {
     color: $color-cerulean-blue;
     text-transform: uppercase;
+    transition: color $trans-default, opacity $trans-default;
   }
 
   span:last-child {
@@ -43,6 +72,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: color $trans-default, background-color $trans-default;
 
     @include vp-767 {
       width: 34px;
@@ -52,5 +82,33 @@
 
   svg {
     color: $color-default-white;
+    transition: color $trans-default, transform $trans-default;
+  }
+}
+
+
+.btn__next,
+.btn__prev {
+  width: 22px;
+  height: 22px;
+  padding: 6px;
+  background-color: $color-transparent;
+  outline: none;
+  border: 1px $color-transparent solid;
+  border-radius: 50%;
+  display: flex;
+  cursor: pointer;
+  transition: background-color $trans-default, opacity $trans-default;
+
+  &:disabled {
+    color: $color-mischka;
+  }
+
+  @include hover-focus {
+    background-color: $color-default-white;
+  }
+
+  @include active {
+    opacity: 0.7;
   }
 }

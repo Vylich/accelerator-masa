@@ -212,11 +212,44 @@
   height: 30px;
   border-radius: 50%;
   background-color: $color-cerulean-blue;
-  padding: 10px;
   display: flex;
   align-items: center;
+  flex-shrink: 0;
+  justify-content: center;
+  transition: all $trans-default;
+
+  &:disabled {
+    background-color: $color-mischka;
+  }
+
+  @include hover {
+    outline: none;
+    background-color: $color-default-white;
+
+    svg {
+      transform: rotate(45deg);
+      color: $color-cerulean-blue;
+    }
+  }
+
+  @include focus {
+    outline: none;
+    background-color: $color-default-white;
+
+    svg {
+      transform: rotate(45deg);
+      color: $color-cerulean-blue;
+    }
+  }
+
+  @include active {
+    svg {
+      opacity: 0.7;
+    }
+  }
 
   svg {
     color: $color-default-white;
+    transition: all $trans-default;
   }
 }

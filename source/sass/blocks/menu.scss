@@ -31,6 +31,11 @@
 
   a {
     width: 100%;
+
+    @include hover-focus {
+      color: $color-default-white;
+      opacity: 1;
+    }
   }
 }
 

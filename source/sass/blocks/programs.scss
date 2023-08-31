@@ -211,9 +211,43 @@
   padding: 11px;
   border-radius: 50%;
   display: flex;
+  transition: background-color $trans-default;
+
+  &:disabled {
+    background-color: $color-mischka;
+  }
+
+  @include hover {
+    outline: none;
+    background-color: $color-default-white;
+
+    svg {
+      transform: rotate(45deg);
+      color: $color-cerulean-blue;
+    }
+  }
+
+  @include focus {
+    outline: none;
+    background-color: $color-default-white;
+
+    svg {
+      transform: rotate(45deg);
+      color: $color-cerulean-blue;
+    }
+  }
+
+  @include active {
+    svg {
+      opacity: 0.7;
+    }
+  }
+
 
   svg {
+    pointer-events: none;
     color: $color-default-white;
+    transition: transform $trans-default, color $trans-default, opacity $trans-default;
   }
 }
 
@@ -257,18 +291,6 @@
   top: 0;
   background-color: $color-cerulean-blue;
   transition: width 0.2s ease;
-}
-
-.btn__next,
-.btn__prev {
-  width: 22px;
-  height: 22px;
-  padding: 6px;
-  background-color: $color-transparent;
-  outline: none;
-  border: none;
-  display: flex;
-  cursor: pointer;
 }
 
 .programs__btn {

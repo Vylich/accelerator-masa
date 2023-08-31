@@ -8,6 +8,23 @@
     border-radius: 50%;
     display: flex;
 
+    @include hover-focus {
+      opacity: 0.8;
+
+      svg {
+        opacity: 0.8;
+      }
+    }
+
+    @include active {
+      background-color: $color-endeavuor;
+      opacity: 1;
+
+      svg {
+        opacity: 1;
+      }
+    }
+
     @include vp-767 {
       width: 26px;
       height: 26px;

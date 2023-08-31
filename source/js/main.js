@@ -7,6 +7,12 @@ import {initDropdown} from './modules/dropdown';
 import {showContentAccordion} from './modules/accordion';
 import {initNewsSlider} from './modules/init-news';
 import {initMenu} from './modules/menu';
+import {initDropdownModal} from './modules/dropdown';
+import {resetFocus} from './utils/reset-focus';
+import {formValidate, popupFormValidate} from './modules/form';
+import {onEventCalllback} from './modules/phone-mask.js';
+
+const phoneInputs = document.querySelectorAll('[data-phone-pattern]');
 
 // ---------------------------------
 
@@ -15,6 +21,15 @@ window.addEventListener('DOMContentLoaded', () => {
   // Utils
   // ---------------------------------
 
+  if (phoneInputs) {
+    for (let elem of phoneInputs) {
+      for (let ev of ['input', 'blur', 'focus']) {
+        elem.addEventListener(ev, onEventCalllback);
+      }
+    }
+  }
+
+  resetFocus();
   iosVhFix();
   initHeroSlider();
   createMap();
@@ -24,6 +39,9 @@ window.addEventListener('DOMContentLoaded', () => {
   showContentAccordion();
   initNewsSlider();
   initMenu();
+  initDropdownModal();
+  formValidate();
+  popupFormValidate();
 
   // Modules
   // ---------------------------------

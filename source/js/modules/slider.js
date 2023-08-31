@@ -92,10 +92,15 @@ const initProgramsSlider = () => {
       prevEl: '.programs__btn-prev',
     },
     breakpoints: {
+      320: {
+        allowTouchMove: true,
+      },
       768: {
+        allowTouchMove: true,
         spaceBetween: 30,
       },
       1199: {
+        allowTouchMove: false,
         slidesPerView: 3,
         spaceBetween: 32,
       },
@@ -141,6 +146,17 @@ const initReviewsSlider = () => {
     navigation: {
       nextEl: '.reviews__btn-next',
       prevEl: '.reviews__btn-prev',
+    },
+    breakpoints: {
+      320: {
+        allowTouchMove: true,
+      },
+      768: {
+        allowTouchMove: true,
+      },
+      1200: {
+        allowTouchMove: false,
+      },
     },
     on: {
       slideChange: () => {

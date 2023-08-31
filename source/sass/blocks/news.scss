@@ -80,6 +80,12 @@
   border-radius: 20px;
   border: 1px solid $color-transparent;
   cursor: pointer;
+  opacity: 0.6;
+
+  @include hover-focus {
+    outline: none;
+    opacity: 1;
+  }
 
   @include vp-1199 {
     padding: 11px 20px;
@@ -93,6 +99,7 @@
 
   &.is-active {
     border: 1px solid $color-cerulean-blue;
+    opacity: 1;
   }
 }
 
@@ -137,6 +144,17 @@
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+
+  @include hover-focus {
+    opacity: 1;
+    border-color: $color-cerulean-blue;
+  }
+
+  @include active {
+    background-color: $color-endeavuor;
+    border-color: $color-endeavuor;
+    color: $color-default-white;
+  }
 
   @include vp-767 {
     font-size: 14px;
