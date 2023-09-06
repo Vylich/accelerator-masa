@@ -2315,6 +2315,10 @@ button,
   text-transform: uppercase;
   -webkit-transition: color 0.3s ease, opacity 0.3s ease;
   transition: color 0.3s ease, opacity 0.3s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .btn span:last-child {
@@ -2335,6 +2339,8 @@ button,
   justify-content: center;
   -webkit-transition: color 0.3s ease, background-color 0.3s ease;
   transition: color 0.3s ease, background-color 0.3s ease;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .btn svg {
@@ -2362,9 +2368,9 @@ button,
   transition: background-color 0.3s ease, opacity 0.3s ease;
 }
 
-.btn__next:disabled,
-.btn__prev:disabled {
-  color: #a9afb7;
+.btn__next svg,
+.btn__prev svg {
+  color: #316dc2;
 }
 
 .btn__next.focus-visible:focus,
@@ -2375,6 +2381,14 @@ button,
 .btn__next.focus-visible:active,
 .btn__prev.focus-visible:active {
   opacity: 0.7;
+}
+
+.swiper-button-disabled {
+  pointer-events: none;
+}
+
+.swiper-button-disabled svg {
+  color: #a9afb7;
 }
 
 .modal {
@@ -2609,6 +2623,26 @@ button,
 .modal__input-checkbox:checked + .modal__checkbox {
   background-color: #316dc2;
   border: 1px solid #316dc2;
+  position: relative;
+}
+
+.modal__input-checkbox:checked + .modal__checkbox::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 10px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-mask-image: url("../img/icons/icon-check.svg");
+  mask-image: url("../img/icons/icon-check.svg");
+  background-color: #ffffff;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
 }
 
 .modal__btn {
@@ -3215,6 +3249,7 @@ button,
   padding: 4px 4px 4px 15px;
   -webkit-transition: width 0.3s ease;
   transition: width 0.3s ease;
+  cursor: pointer;
 }
 
 .header__button span {
@@ -3644,14 +3679,9 @@ button,
 }
 
 .menu__item {
-  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.menu__item a {
-  width: 100%;
 }
 
 .menu__item a.focus-visible:focus {
@@ -3751,6 +3781,10 @@ button,
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
+  margin-right: 20px;
+  margin-left: 20px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .footer__menu li {
@@ -3786,6 +3820,10 @@ button,
   margin: 0;
 }
 
+.footer__menu a {
+  white-space: nowrap;
+}
+
 .footer__menu a.focus-visible:focus {
   color: #316dc2;
 }
@@ -3810,6 +3848,12 @@ button,
 .footer__policy a.focus-visible:active {
   color: #275699;
   border-color: #275699;
+}
+
+.social {
+  max-width: 148px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .social svg {
@@ -4155,6 +4199,7 @@ button,
   margin: 0;
   padding: 0;
   gap: 51px;
+  margin-left: 20px;
 }
 
 .contacts__list p {
@@ -4199,6 +4244,10 @@ button,
 .contacts__list a.focus-visible:active {
   border-color: rgba(255, 255, 255, 0);
   opacity: 0.8;
+}
+
+.contacts__phone {
+  min-width: 132px;
 }
 
 .programs {
@@ -4689,6 +4738,7 @@ button,
   font-weight: 400;
   line-height: 12px;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .form__checkbox {
@@ -4969,6 +5019,9 @@ span.modal__error {
   margin-bottom: 10px;
   margin-top: 44px;
   overflow: visible;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
 }
 
 .reviews__slider {
@@ -4981,6 +5034,7 @@ span.modal__error {
   padding: 50px;
   max-width: 605px;
   padding-bottom: 43px;
+  height: auto;
 }
 
 .reviews__item h4 {
@@ -5159,7 +5213,7 @@ span.modal__error {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  pointer-events: none;
+  cursor: pointer;
   position: relative;
   max-height: 54px;
 }
@@ -5338,6 +5392,8 @@ span.modal__error {
   -ms-flex-pack: center;
   justify-content: center;
   margin-top: 40px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .news__btn {
@@ -5649,6 +5705,13 @@ span.modal__error {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  cursor: pointer;
+  -ms-flex-item-align: self-start;
+  -ms-grid-row-align: self-start;
+  align-self: self-start;
 }
 
 .item-select__list {
@@ -6100,6 +6163,9 @@ span.modal__error {
     -ms-flex-direction: column;
     flex-direction: column;
     padding: 29px 42px 25px 29px;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 
   .about__item span {
@@ -7167,7 +7233,6 @@ span.modal__error {
   }
 
   .reviews__container {
-    overflow: hidden;
     margin-top: 33px;
   }
 
@@ -7309,6 +7374,8 @@ span.modal__error {
   }
 
   .news__tabs {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
     overflow: scroll;
     -webkit-box-pack: start;
     -ms-flex-pack: start;

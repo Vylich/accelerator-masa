@@ -1,5 +1,4 @@
 const btnMenuNode = document.querySelector('.header__button');
-const btnMenu = btnMenuNode.querySelector('button');
 const menuNode = document.querySelector('.menu');
 const bodyNode = document.querySelector('body');
 const headerMenuNode = document.querySelector('.header__menu');
@@ -10,7 +9,7 @@ const initMenu = () => {
   menuNode.classList.add('is-closed');
   bodyNode.classList.remove('is-open-menu');
 
-  btnMenu.addEventListener('click', () => {
+  btnMenuNode.addEventListener('click', () => {
     if (menuNode.classList.contains('is-closed')) {
       headerMenuNode.insertAdjacentHTML('beforeEnd', '<div class="overlay"></div>');
       menuNode.classList.remove('is-closed');
@@ -27,6 +26,13 @@ const initMenu = () => {
       setTimeout(closeMenu, 100);
     }
   });
+  document.addEventListener('keydown', (e) => {
+    if (e.keyCode === 13) {
+      if (e.target.tagName === 'A') {
+        setTimeout(closeMenu, 100);
+      }
+    }
+  });
 
   menuSelects.forEach((select) => {
     select.addEventListener('click', () => {
@@ -39,6 +45,34 @@ const initMenu = () => {
         select.classList.add('is-active');
         activeContent.classList.add('is-active');
         activeContent.style.maxHeight = activeContent.scrollHeight + 'px';
+      }
+    });
+    select.addEventListener('keydown', (e) => {
+      if (e.keyCode === 13) {
+        const activeContent = document.querySelector('#' + select.dataset.menu);
+        if (activeContent.classList.contains('is-active')) {
+          activeContent.classList.remove('is-active');
+          select.classList.remove('is-active');
+          activeContent.style.maxHeight = 0;
+        } else {
+          select.classList.add('is-active');
+          activeContent.classList.add('is-active');
+          activeContent.style.maxHeight = activeContent.scrollHeight + 'px';
+        }
+      }
+    });
+    select.addEventListener('keydown', (e) => {
+      if (e.keyCode === 32) {
+        const activeContent = document.querySelector('#' + select.dataset.menu);
+        if (activeContent.classList.contains('is-active')) {
+          activeContent.classList.remove('is-active');
+          select.classList.remove('is-active');
+          activeContent.style.maxHeight = 0;
+        } else {
+          select.classList.add('is-active');
+          activeContent.classList.add('is-active');
+          activeContent.style.maxHeight = activeContent.scrollHeight + 'px';
+        }
       }
     });
   });

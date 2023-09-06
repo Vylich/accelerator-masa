@@ -1,5 +1,8 @@
 .item-select {
   flex-direction: column;
+  align-items: start;
+  cursor: pointer;
+  align-self: self-start;
 }
 
 .item-select__list {

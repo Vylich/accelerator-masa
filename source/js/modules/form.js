@@ -19,7 +19,7 @@ const formValidate = () => {
       return true;
     }
     return false;
-  }, 'В имени не может быть цифр', 2, false);
+  }, '', 2, false);
 
   formNode.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -44,7 +44,7 @@ const popupFormValidate = () => {
       return true;
     }
     return false;
-  }, 'В имени не может быть цифр', 2, false);
+  }, '', 2, false);
 
   const modalSelectInputNode = modalFormNode.querySelector('#sity');
 
@@ -53,7 +53,7 @@ const popupFormValidate = () => {
       return true;
     }
     return false;
-  }, 'В имени не может быть цифр', 2, false);
+  }, '', 2, false);
 
   modalFormNode.addEventListener('submit', function (e) {
     e.preventDefault();

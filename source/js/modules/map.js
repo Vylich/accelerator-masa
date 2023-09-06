@@ -17,7 +17,7 @@ const createMap = () => {
   }).addTo(map);
 
   const mainPinIcon = L.icon({
-    iconUrl: '/img/icons/map-marker.svg',
+    iconUrl: './img/icons/map-marker.svg',
     iconSize: [48, 48],
     iconAnchor: [19, 50],
   });

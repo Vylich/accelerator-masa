@@ -71,6 +71,9 @@
     margin: 0;
     display: flex;
     gap: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
+    flex-wrap: wrap;
 
     @include vp-1199 {
       gap: 13px;
@@ -156,6 +159,8 @@
 }
 
 .footer__menu a {
+  white-space: nowrap;
+
   @include hover-focus {
     color: $color-cerulean-blue;
   }

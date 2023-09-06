@@ -5,7 +5,7 @@ const showContentAccordion = () => {
   items.forEach((item) => {
     const headers = item.querySelectorAll('.accordion__header');
     headers.forEach((header) => {
-      header.insertAdjacentHTML('beforeEnd', '<button></button>');
+      header.insertAdjacentHTML('beforeEnd', '<button aria-label="Показать скрытый текст"></button>');
       header.addEventListener('click', () => {
         header.blur();
         const activeContent = document.querySelector('#' + header.dataset.acc);

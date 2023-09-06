@@ -26,12 +26,9 @@
 }
 
 .menu__item {
-  cursor: pointer;
   display: flex;
 
   a {
-    width: 100%;
-
     @include hover-focus {
       color: $color-default-white;
       opacity: 1;
