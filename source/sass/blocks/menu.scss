@@ -9,7 +9,7 @@
 }
 
 .menu.is-opened {
-  width: 290px;
+  width: 286px;
   max-height: auto;
   opacity: 1;
   visibility: visible;
@@ -19,10 +19,10 @@
 .menu__wrapper {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 21px;
   height: auto;
   overflow: hidden;
-  padding: 35px 0;
+  padding: 31px 0;
 }
 
 .menu__item {

@@ -806,7 +806,7 @@
                 <fieldset class="form__fieldset">
                   <label class="form__field field">
                     <span>Имя</span>
-                    <input type="text" name="name" id="name-modal" required autocomplete="off" data-pristine-required-message="Пожалуйста введите свое Имя"/>
+                    <input type="text" name="name" id="name" required autocomplete="off" data-pristine-required-message="Пожалуйста введите свое Имя"/>
                   </label>
                   <label class="form__field field">
                     <span>Телефон</span>
@@ -952,7 +952,7 @@
             <fieldset class="modal__fieldset">
               <label class="modal__field field">
                 <span>Имя</span>
-                <input type="text" name="name" id="name" required autocomplete="off" data-pristine-required-message="Пожалуйста введите свое Имя"/>
+                <input type="text" autofocus name="name" tabindex="0" id="name-modal" required autocomplete="off" data-pristine-required-message="Пожалуйста введите свое Имя"/>
               </label>
               <label class="modal__field field">
                 <span>Телефон</span>
@@ -966,20 +966,21 @@
                       <span class="dropdown-modal__text"></span>
                       <button type="button" aria-label="Открыть выпадающий список" data-select class="dropdown-modal__btn"></button>
                     </div>
-                    <ul class="dropdown-modal__list" tabindex="1">
+                    <ul class="dropdown-modal__list">
                       <li
                         class="dropdown-modal__item"
                         data-value="Санкт-Петербург"
+                        tabindex="1"
                       >
                         Санкт-Петербург
                       </li>
-                      <li class="dropdown-modal__item" data-value="Москва">
+                      <li class="dropdown-modal__item" tabindex="0" data-value="Москва">
                         Москва
                       </li>
-                      <li class="dropdown-modal__item" data-value="Казань">
+                      <li class="dropdown-modal__item" tabindex="0" data-value="Казань">
                         Казань
                       </li>
-                      <li class="dropdown-modal__item" data-value="Оренбург">
+                      <li class="dropdown-modal__item" tabindex="0" data-value="Оренбург">
                         Оренбург
                       </li>
                     </ul>
@@ -989,7 +990,7 @@
                     required
                     id="sity"
                     data-pristine-required-message="Пожалуйста выберите город из списка"
-
+                    tabindex="-1"
                   >
                     <option value="" selected hidden>Выберите город</option>
                     <option value="Санкт-Петербург">Санкт-Петербург</option>

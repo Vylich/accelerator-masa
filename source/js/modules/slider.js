@@ -8,10 +8,10 @@ const initHeroSlider = () => {
 
   new Swiper(heroSliderNode, {
     speed: 300,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: false,
+    // },
     effect: 'fade',
     fadeEffect: {
       crossFade: false,

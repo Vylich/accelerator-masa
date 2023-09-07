@@ -27,7 +27,7 @@
     line-height: 62px;
     font-weight: 400;
     background-color: $color-default-white;
-    padding: 40px 50px 30px;
+    padding: 40px 50px 27px;
     border-radius: 0 30px 30px 0;
     max-width: 968px;
 
@@ -46,12 +46,13 @@
   }
 
   p {
-    margin: 0;
+    margin: -4px 0 -6px;
     font-size: 16px;
     line-height: 26px;
     z-index: 1;
     color: $color-charcoal;
-    padding-right: 30px;
+    padding-right: 28px;
+
 
     @include vp-1199 {
       line-height: 20px;
@@ -99,11 +100,10 @@
   position: relative;
   background-color: $color-default-white;
   border-radius: 0 0 30px 30px;
-  padding: 0 50px 28px;
+  padding: 0 50px 35px;
   color: $color-cerulean-blue;
   max-width: 772px;
   align-items: center;
-  margin-top: -6px;
 
   @include vp-1199 {
     padding: 0 40px 32px;
@@ -138,7 +138,7 @@
     width: 20px;
     height: 20px;
     right: -20px;
-    top: 6px;
+    top: 0;
     mask-image: url("../img/icons/icon-angle.svg");
     background-color: $color-default-white;
     background-repeat: no-repeat;

@@ -3,6 +3,7 @@ const menuNode = document.querySelector('.menu');
 const bodyNode = document.querySelector('body');
 const headerMenuNode = document.querySelector('.header__menu');
 const menuSelects = document.querySelectorAll('.item-select__wrapper');
+const headerWrapperNode = document.querySelector('.header__wrapper');
 
 
 const initMenu = () => {
