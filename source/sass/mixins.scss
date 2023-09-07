@@ -57,6 +57,11 @@
   }
 }
 
+@mixin vp-adaptive-mobile {
+  @media (min-width: 394px) and (max-width: ($vp-768 - 1px)) {
+    @content;
+  }
+}
 
 @mixin background-image($filename, $folder, $ext: "jpg") {
   @supports (background-image: url("../img/#{$folder}/#{$filename}.webp")) {

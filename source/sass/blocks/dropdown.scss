@@ -9,14 +9,14 @@
   background-color: $color-transparent;
   background-repeat: no-repeat;
   border: none;
-  cursor: pointer;
+  pointer-events: none;
   outline: none;
   padding: 0;
   background-size: contain;
   background-position: center center;
   transition: transform $trans-default;
 
-  @include focus {
+  &.is-active {
     transform: rotate(-180deg);
   }
 }
@@ -56,6 +56,16 @@
   &--active {
     color: $color-default-white;
     background-color: $color-cerulean-blue;
+
+    @include hover-focus {
+      color: $color-cerulean-blue;
+      background-color: $color-default-white;
+    }
+  }
+
+  @include hover-focus {
+    outline: none;
+    color: $color-cerulean-blue;
   }
 }
 

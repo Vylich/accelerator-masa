@@ -3641,6 +3641,10 @@ button,
   cursor: pointer;
 }
 
+.hero .swiper-pagination-bullet.focus-visible:focus {
+  outline: none;
+}
+
 .hero .swiper-pagination-bullet-active {
   background-color: #316dc2;
 }
@@ -3826,6 +3830,7 @@ button,
 }
 
 .footer__menu a.focus-visible:focus {
+  outline: none;
   color: #316dc2;
 }
 
@@ -3842,6 +3847,7 @@ button,
 }
 
 .footer__policy a.focus-visible:focus {
+  outline: none;
   color: #316dc2;
   border-color: #316dc2;
 }
@@ -3875,6 +3881,7 @@ button,
 
 .social a.focus-visible:focus {
   opacity: 0.8;
+  outline: none;
 }
 
 .social a.focus-visible:focus svg {
@@ -4021,6 +4028,9 @@ button,
   -ms-flex-pack: justify;
   justify-content: space-between;
   position: relative;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  row-gap: 15px;
 }
 
 .about__item span {
@@ -4029,6 +4039,7 @@ button,
   line-height: 30px;
   letter-spacing: 0.26px;
   text-transform: uppercase;
+  margin-right: 10px;
 }
 
 .about__item p {
@@ -4037,7 +4048,6 @@ button,
   font-weight: 300;
   line-height: 20px;
   color: #f0efe9;
-  margin-left: 10px;
 }
 
 .about__item::after {
@@ -4055,20 +4065,23 @@ button,
 
 .conditions {
   margin-top: 120px;
+  background-color: #316dc2;
 }
 
 .conditions__wrapper {
   padding-top: 120px;
   padding-bottom: 107px;
-  background-color: #316dc2;
   color: #ffffff;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 498px 498px;
-  grid-template-columns: 498px 498px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-column-gap: 138px;
   -moz-column-gap: 138px;
   column-gap: 138px;
+}
+
+.conditions__main {
+  max-width: 498px;
 }
 
 .conditions__main h2 {
@@ -4096,6 +4109,7 @@ button,
 
 .conditions__info {
   margin-top: 9px;
+  max-width: 498px;
 }
 
 .conditions__info h3 {
@@ -4288,7 +4302,8 @@ button,
 .programs__card {
   background-repeat: no-repeat;
   background-size: cover;
-  height: auto;
+  min-height: 420px;
+  max-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4296,9 +4311,13 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 280px 51px 20px 20px;
+  padding: 0 51px 20px 20px;
   border-radius: 12px;
   position: relative;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  background-position: center;
 }
 
 @supports (background-image: url("../img/program/program-internship.webp")) {
@@ -4759,7 +4778,7 @@ button,
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.form__checkbox.focus-visible:focus {
+.form__input-checkbox.focus-visible:focus + .form__checkbox {
   outline: none;
   border-color: #ffffff;
 }
@@ -4870,6 +4889,11 @@ button,
   color: #ffffff;
 }
 
+.form__sity-wrap.focus-visible:focus {
+  outline: none;
+  border: 1px solid #ffffff;
+}
+
 span.form__error,
 span.modal__error {
   color: #ff5e66;
@@ -4901,6 +4925,7 @@ span.modal__error {
 .field .form__sity-wrap.focus-visible:focus,
 .field .modal__sity-wrap.focus-visible:focus,
 .field .modal__checkbox.focus-visible:focus {
+  outline: none;
   border-color: #ffffff;
 }
 
@@ -4924,7 +4949,7 @@ span.modal__error {
   background-color: rgba(255, 255, 255, 0);
   background-repeat: no-repeat;
   border: none;
-  cursor: pointer;
+  pointer-events: none;
   outline: none;
   padding: 0;
   background-size: contain;
@@ -4935,7 +4960,7 @@ span.modal__error {
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
-.dropdown__btn.focus-visible:focus {
+.dropdown__btn.is-active {
   -webkit-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   transform: rotate(-180deg);
@@ -4979,6 +5004,16 @@ span.modal__error {
 .dropdown__item--active {
   color: #ffffff;
   background-color: #316dc2;
+}
+
+.dropdown__item--active.focus-visible:focus {
+  color: #316dc2;
+  background-color: #ffffff;
+}
+
+.dropdown__item.focus-visible:focus {
+  outline: none;
+  color: #316dc2;
 }
 
 .dropdown__text-wrap {
@@ -5029,19 +5064,18 @@ span.modal__error {
 }
 
 .reviews__slider {
-  overflow: visible;
+  overflow: hidden;
 }
 
 .reviews__item {
   border: 1px solid #316dc2;
   border-radius: 16px;
   padding: 50px;
-  max-width: 605px;
   padding-bottom: 43px;
   height: auto;
 }
 
-.reviews__item h4 {
+.reviews__item h3 {
   margin: 0;
   color: #316dc2;
   font-size: 24px;
@@ -5219,10 +5253,9 @@ span.modal__error {
   align-items: center;
   cursor: pointer;
   position: relative;
-  max-height: 54px;
 }
 
-.accordion__header span {
+.accordion__header span:first-child {
   font-size: 28px;
   font-weight: 400;
   line-height: 40px;
@@ -5230,7 +5263,7 @@ span.modal__error {
   padding-right: 200px;
 }
 
-.accordion__header button {
+.accordion__header span:last-child {
   border: 1px solid #316dc2;
   outline: none;
   width: 40px;
@@ -5251,36 +5284,29 @@ span.modal__error {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
-.accordion__header button:disabled {
+.accordion__header span:last-child:disabled {
   background-color: #a9afb7;
 }
 
-.accordion__header button:disabled::after,
-.accordion__header button:disabled::before {
+.accordion__header span:last-child:disabled::after,
+.accordion__header span:last-child:disabled::before {
   background-color: #ffffff;
 }
 
-.accordion__header button.focus-visible:focus {
-  background-color: rgba(255, 255, 255, 0);
-}
-
-.accordion__header button.focus-visible:focus::after,
-.accordion__header button.focus-visible:focus::before {
-  background-color: #316dc2;
-}
-
-.accordion__header button.focus-visible:active {
+.accordion__header span:last-child.focus-visible:active {
   background-color: #275699;
 }
 
-.accordion__header button.focus-visible:active::after,
-.accordion__header button.focus-visible:active::before {
+.accordion__header span:last-child.focus-visible:active::after,
+.accordion__header span:last-child.focus-visible:active::before {
   background-color: #ffffff;
 }
 
-.accordion__header button::after {
+.accordion__header span:last-child::after {
   content: "";
   position: absolute;
   background-color: #ffffff;
@@ -5293,7 +5319,7 @@ span.modal__error {
   transform: translate(-50%, -50%);
 }
 
-.accordion__header button::before {
+.accordion__header span:last-child::before {
   content: "";
   position: absolute;
   background-color: #ffffff;
@@ -5306,40 +5332,40 @@ span.modal__error {
   transform: translate(-50%, -50%);
 }
 
-.accordion__item.is-active button {
+.accordion__item.is-active span:last-child {
   background-color: #ffffff;
   border: 1px solid #ffffff;
 }
 
-.accordion__item.is-active button::before {
+.accordion__item.is-active span:last-child::before {
   display: none;
 }
 
-.accordion__item.is-active button::after {
+.accordion__item.is-active span:last-child::after {
   background-color: #316dc2;
 }
 
-.accordion__item.is-active button:disabled {
+.accordion__item.is-active span:last-child:disabled {
   background-color: #a9afb7;
 }
 
-.accordion__item.is-active button:disabled::after {
+.accordion__item.is-active span:last-child:disabled::after {
   background-color: #ffffff;
 }
 
-.accordion__item.is-active button.focus-visible:focus {
+.accordion__item.is-active span:last-child.focus-visible:focus {
   background-color: rgba(255, 255, 255, 0);
 }
 
-.accordion__item.is-active button.focus-visible:focus::after {
+.accordion__item.is-active span:last-child.focus-visible:focus::after {
   background-color: #ffffff;
 }
 
-.accordion__item.is-active button.focus-visible:active {
+.accordion__item.is-active span:last-child.focus-visible:active {
   background-color: #ffffff;
 }
 
-.accordion__item.is-active button.focus-visible:active::after {
+.accordion__item.is-active span:last-child.focus-visible:active::after {
   background-color: #275699;
 }
 
@@ -6007,11 +6033,11 @@ span.modal__error {
   }
 
   .hero__btn {
-    margin-top: 3px;
+    margin-top: -2px;
   }
 
   .hero__descr {
-    padding: 0 40px 32px;
+    padding: 1px 40px 35px;
     max-width: 591px;
     -webkit-box-align: start;
     -ms-flex-align: start;
@@ -6145,6 +6171,10 @@ span.modal__error {
     max-width: 100%;
   }
 
+  .about__item:nth-child(3n) {
+    padding-right: 42px;
+  }
+
   .about__item:nth-child(3n) p {
     max-width: 100%;
   }
@@ -6175,11 +6205,11 @@ span.modal__error {
   .about__item span {
     font-size: 20px;
     line-height: 22px;
+    margin-right: 0;
   }
 
   .about__item p {
     margin-top: 8px;
-    margin-left: 0;
   }
 
   .about__item::after {
@@ -6202,6 +6232,10 @@ span.modal__error {
     flex-direction: column;
   }
 
+  .conditions__main {
+    max-width: 100%;
+  }
+
   .conditions__main h2 {
     font-size: 34px;
     line-height: 50px;
@@ -6221,6 +6255,7 @@ span.modal__error {
 
   .conditions__info {
     margin-top: 46px;
+    max-width: 100%;
   }
 
   .conditions__info h3 {
@@ -6306,10 +6341,8 @@ span.modal__error {
 
   .programs__card {
     padding-right: 41px;
-    padding-top: 285px;
-    max-width: 324px;
+    min-width: 324px;
     padding-bottom: 19px;
-    height: 420px;
   }
 
   .programs__inner-wrapper div {
@@ -6341,11 +6374,6 @@ span.modal__error {
 
   .form__wrapper {
     padding-top: 100px;
-  }
-
-  .form__wrapper img {
-    -o-object-position: -246px center;
-    object-position: -246px center;
   }
 
   .form__content {
@@ -6397,12 +6425,16 @@ span.modal__error {
     margin-top: 39px;
   }
 
+  .reviews__slider {
+    overflow: visible;
+  }
+
   .reviews__item {
     max-width: 560px;
     padding: 50px 49px 46px;
   }
 
-  .reviews__item h4 {
+  .reviews__item h3 {
     font-size: 20px;
     line-height: 24px;
     margin-top: 23px;
@@ -6459,14 +6491,9 @@ span.modal__error {
     padding: 29px 30px;
   }
 
-  .accordion .accordion__item:last-child button,
-  .accordion .accordion__item:nth-last-child(2) button {
+  .accordion .accordion__item:last-child span:last-child,
+  .accordion .accordion__item:nth-last-child(2) span:last-child {
     top: 0;
-  }
-
-  .accordion .accordion__item:last-child button,
-  .accordion .accordion__item:nth-last-child(2) button {
-    top: 6px;
   }
 
   .accordion__item {
@@ -6478,18 +6505,17 @@ span.modal__error {
   }
 
   .accordion__header {
-    max-height: 42px;
     margin-top: 6px;
     margin-bottom: 6px;
   }
 
-  .accordion__header span {
+  .accordion__header span:first-child {
     font-size: 22px;
     line-height: 26px;
     padding-right: 23px;
   }
 
-  .accordion__header button {
+  .accordion__header span:last-child {
     right: -1px;
     top: -7px;
   }
@@ -6578,7 +6604,7 @@ span.modal__error {
 
   .news-card__descr p {
     line-height: 20px;
-    padding-right: 18px;
+    padding-right: 16px;
   }
 
   .dropdown-modal__text-wrap {
@@ -6811,6 +6837,15 @@ span.modal__error {
     height: 8px;
   }
 
+  .menu.is-opened {
+    width: 290px;
+    padding-left: 23px;
+  }
+
+  .menu__wrapper {
+    padding-top: 33px;
+  }
+
   .footer {
     margin-top: 29px;
     padding-bottom: 40px;
@@ -6842,6 +6877,7 @@ span.modal__error {
     -webkit-column-gap: 29px;
     -moz-column-gap: 29px;
     column-gap: 29px;
+    margin: 0;
   }
 
   .footer__menu li {
@@ -6943,6 +6979,10 @@ span.modal__error {
     gap: 22px;
   }
 
+  .about__item:nth-child(3n) {
+    padding-right: 13px;
+  }
+
   .about__item {
     margin-left: 10px;
     padding: 19px 9px 24px 20px;
@@ -6955,6 +6995,7 @@ span.modal__error {
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.16px;
+    margin-right: 0;
   }
 
   .about__item p {
@@ -7052,6 +7093,7 @@ span.modal__error {
     flex-direction: column;
     gap: 12px;
     margin-top: 30px;
+    margin-left: 0;
   }
 
   .contacts__list p {
@@ -7087,9 +7129,7 @@ span.modal__error {
 
   .programs__card {
     height: 400px;
-  }
-
-  .programs__card {
+    min-width: 290px;
     padding: 271px 10px 18px;
   }
 
@@ -7149,12 +7189,13 @@ span.modal__error {
   .form__content h3 {
     font-size: 18px;
     line-height: 22px;
+    margin-bottom: 0;
   }
 
   .form__content p {
     font-size: 14px;
     line-height: 20px;
-    margin-top: 17px;
+    margin-top: 15px;
   }
 
   .form__content form {
@@ -7242,7 +7283,7 @@ span.modal__error {
     padding: 30px 14px 25px;
   }
 
-  .reviews__item h4 {
+  .reviews__item h3 {
     font-size: 16px;
     line-height: 18px;
     margin-top: 25px;
@@ -7322,6 +7363,14 @@ span.modal__error {
     padding: 19px 15px;
   }
 
+  .accordion .accordion__item:last-child span:last-child,
+  .accordion .accordion__item:nth-last-child(2) span:last-child {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
   .accordion__item {
     padding: 20px 15px;
   }
@@ -7333,18 +7382,20 @@ span.modal__error {
   .accordion__header {
     margin-top: 1px;
     margin-bottom: 1px;
-    max-height: 54px;
   }
 
-  .accordion__header span {
+  .accordion__header span:first-child {
     font-size: 16px;
     line-height: 18px;
     padding-right: 45px;
   }
 
-  .accordion__header button {
+  .accordion__header span:last-child {
     right: -1px;
-    top: -2px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
   }
 
   .accordion__content {
@@ -7385,6 +7436,7 @@ span.modal__error {
     margin-right: -15px;
     gap: 12px;
     margin-top: 27px;
+    scrollbar-width: none;
   }
 
   .news__btn {
@@ -7540,6 +7592,14 @@ span.modal__error {
   }
 }
 
+@media (min-width: 394px) and (max-width: 767px) {
+  .form__policy {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
 @media (hover: hover) {
   .btn:hover:not(.focus-visible) {
     outline: none;
@@ -7583,22 +7643,29 @@ span.modal__error {
     background-color: rgba(0, 0, 0, 0.4);
   }
 
+  .hero .swiper-pagination-bullet:hover:not(.focus-visible) {
+    outline: none;
+  }
+
   .menu__item a:hover:not(.focus-visible) {
     color: #ffffff;
     opacity: 1;
   }
 
   .footer__menu a:hover:not(.focus-visible) {
+    outline: none;
     color: #316dc2;
   }
 
   .footer__policy a:hover:not(.focus-visible) {
+    outline: none;
     color: #316dc2;
     border-color: #316dc2;
   }
 
   .social a:hover:not(.focus-visible) {
     opacity: 0.8;
+    outline: none;
   }
 
   .social a:hover:not(.focus-visible) svg {
@@ -7656,23 +7723,34 @@ span.modal__error {
   .field .form__sity-wrap:hover:not(.focus-visible),
   .field .modal__sity-wrap:hover:not(.focus-visible),
   .field .modal__checkbox:hover:not(.focus-visible) {
+    outline: none;
     border-color: #ffffff;
   }
 
-  .accordion__header button:hover:not(.focus-visible) {
+  .dropdown__item--active:hover:not(.focus-visible) {
+    color: #316dc2;
+    background-color: #ffffff;
+  }
+
+  .dropdown__item:hover:not(.focus-visible) {
+    outline: none;
+    color: #316dc2;
+  }
+
+  .accordion__header span:last-child:hover:not(.focus-visible) {
     background-color: rgba(255, 255, 255, 0);
   }
 
-  .accordion__header button:hover:not(.focus-visible)::after,
-  .accordion__header button:hover:not(.focus-visible)::before {
+  .accordion__header span:last-child:hover:not(.focus-visible)::after,
+  .accordion__header span:last-child:hover:not(.focus-visible)::before {
     background-color: #316dc2;
   }
 
-  .accordion__item.is-active button:hover:not(.focus-visible) {
+  .accordion__item.is-active span:last-child:hover:not(.focus-visible) {
     background-color: rgba(255, 255, 255, 0);
   }
 
-  .accordion__item.is-active button:hover:not(.focus-visible)::after {
+  .accordion__item.is-active span:last-child:hover:not(.focus-visible)::after {
     background-color: #ffffff;
   }
 

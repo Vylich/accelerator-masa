@@ -1,5 +1,6 @@
 .conditions {
   margin-top: 120px;
+  background-color: $color-cerulean-blue;
 
   @include vp-1199 {
     margin-top: 100px;
@@ -13,10 +14,8 @@
 .conditions__wrapper {
   padding-top: 120px;
   padding-bottom: 107px;
-  background-color: $color-cerulean-blue;
   color: $color-default-white;
-  display: grid;
-  grid-template-columns: 498px 498px;
+  display: flex;
   column-gap: 138px;
 
   @include vp-1199 {
@@ -33,6 +32,12 @@
 }
 
 .conditions__main {
+  max-width: 498px;
+
+  @include vp-1199 {
+    max-width: 100%;
+  }
+
   h2 {
     font-size: 50px;
     font-weight: 400;
@@ -91,9 +96,11 @@
 
 .conditions__info {
   margin-top: 9px;
-
+  max-width: 498px;
+  
   @include vp-1199 {
     margin-top: 46px;
+    max-width: 100%;
   }
 
   @include vp-767 {

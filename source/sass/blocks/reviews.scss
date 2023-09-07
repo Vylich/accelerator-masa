@@ -53,14 +53,17 @@
 }
 
 .reviews__slider {
-  overflow: visible;
+  overflow: hidden;
+
+  @include vp-1199 {
+    overflow: visible;
+  }
 }
 
 .reviews__item {
   border: 1px solid $color-cerulean-blue;
   border-radius: 16px;
   padding: 50px;
-  max-width: 605px;
   padding-bottom: 43px;
   height: auto;
 
@@ -74,7 +77,7 @@
     padding: 30px 14px 25px;
   }
 
-  h4 {
+  h3 {
     margin: 0;
     color: $color-cerulean-blue;
     font-size: 24px;

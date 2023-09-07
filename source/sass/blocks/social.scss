@@ -23,6 +23,7 @@
 
   @include hover-focus {
     opacity: 0.8;
+    outline: none;
 
     svg {
       opacity: 0.8;

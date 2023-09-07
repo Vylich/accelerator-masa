@@ -13,7 +13,6 @@ import {formValidate, popupFormValidate} from './modules/form';
 import {onEventCalllback} from './modules/phone-mask.js';
 
 const phoneInputs = document.querySelectorAll('[data-phone-pattern]');
-
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {

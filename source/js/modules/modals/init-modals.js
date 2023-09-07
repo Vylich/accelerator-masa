@@ -1,4 +1,6 @@
 import {Modals} from './modals';
+const firstInputNode = document.querySelector('#name-modal');
+const btnModalNode = document.querySelector('.about__btn');
 
 let modals;
 
@@ -27,6 +29,12 @@ const settings = {
 };
 
 const initModals = () => {
+  btnModalNode.addEventListener('click', () => {
+    setTimeout(focusInput, 100);
+  });
+  const focusInput = () => {
+    firstInputNode.focus();
+  };
   const modalElements = document.querySelectorAll('.modal');
   modalElements.forEach((el) => {
     setTimeout(() => {

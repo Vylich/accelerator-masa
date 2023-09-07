@@ -84,6 +84,7 @@
       justify-content: center;
       row-gap: 10px;
       column-gap: 29px;
+      margin: 0;
     }
   }
 
@@ -162,6 +163,7 @@
   white-space: nowrap;
 
   @include hover-focus {
+    outline: none;
     color: $color-cerulean-blue;
   }
 
@@ -189,6 +191,7 @@
   }
 
   @include hover-focus {
+    outline: none;
     color: $color-cerulean-blue;
     border-color: $color-cerulean-blue;
   }

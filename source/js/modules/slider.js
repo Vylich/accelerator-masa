@@ -142,20 +142,23 @@ const initReviewsSlider = () => {
   const swiper = new Swiper(sliderReviews, {
     speed: 300,
     spaceBetween: 30,
-    slidesPerView: 'auto',
+
     navigation: {
       nextEl: '.reviews__btn-next',
       prevEl: '.reviews__btn-prev',
     },
     breakpoints: {
       320: {
+        slidesPerView: 'auto',
         allowTouchMove: true,
       },
       768: {
+        slidesPerView: 'auto',
         allowTouchMove: true,
       },
       1200: {
         allowTouchMove: false,
+        slidesPerView: 2,
       },
     },
     on: {
