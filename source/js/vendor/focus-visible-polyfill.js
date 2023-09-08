@@ -72,6 +72,9 @@ function applyFocusVisiblePolyfill(scope) {
       return true;
     }
 
+    if (tagName === 'DIV') {
+      return true;
+    }
 
     if (el.isContentEditable) {
       return true;

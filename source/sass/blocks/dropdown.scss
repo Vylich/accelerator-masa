@@ -75,6 +75,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 16px 25px;
+  cursor: pointer;
 
   @include vp-1199 {
     padding-right: 20px;

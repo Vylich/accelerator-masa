@@ -160,21 +160,44 @@
   top: 31px;
   right: 33px;
   z-index: 1;
+  width: 36px;
+  height: 36px;
 
-  width: 18px;
-  height: 18px;
+
   padding: 0;
-  mask-image: url("../img/icons/btn-icon-cross.svg");
-  mask-size: contain;
-  background: $color-cerulean-blue;
-  border: none;
+  border-radius: 50%;
+  background-color: $color-transparent;
+
+  border: 1px $color-transparent solid;
   cursor: pointer;
+
+  &::after {
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    mask-image: url("../img/icons/btn-icon-cross.svg");
+    mask-size: contain;
+    background-color: $color-cerulean-blue;
+  }
 
   @include vp-767 {
     top: 22px;
     right: 22px;
     width: 12px;
     height: 12px;
+  }
+
+  @include hover-focus {
+    outline: none;
+    background-color: $color-cerulean-blue;
+
+    &::after {
+      background-color: $color-default-white;
+    }
   }
 }
 
@@ -275,8 +298,27 @@
   border: 1px solid $color-charcoal-opacity;
   cursor: pointer;
 
+  &:disabled {
+    border-color: $color-default-white;
+    background-color: $color-default-white-opacity;
+  }
+
+  @include hover {
+    outline: none;
+    border-color: $color-cerulean-blue;
+  }
+
   @include vp-767 {
     min-width: 20px;
+  }
+}
+
+.modal__input-checkbox {
+  @include focus {
+    &+.modal__checkbox {
+      outline: none;
+      border-color: $color-cerulean-blue;
+    }
   }
 }
 
@@ -284,6 +326,24 @@
   background-color: $color-cerulean-blue;
   border: 1px solid $color-cerulean-blue;
   position: relative;
+
+  &:disabled {
+    border-color: $color-mischka;
+    background-color: $color-mischka;
+
+    &::after {
+      background-color: $color-default-white;
+    }
+  }
+
+  @include hover-focus {
+    border-color: $color-cerulean-blue;
+    background-color: $color-transparent;
+
+    &::after {
+      background-color: $color-cerulean-blue;
+    }
+  }
 
   &::after {
     content: "";
@@ -355,10 +415,8 @@
 .modal .field {
   input,
   textarea,
-  .form__checkbox,
   .form__sity-wrap,
-  .modal__sity-wrap,
-  .modal__checkbox {
+  .modal__sity-wrap {
     &:disabled {
       opacity: 0.6;
       background-color: $color-default-white-opacity;

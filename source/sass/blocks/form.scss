@@ -398,10 +398,8 @@ span.modal__error {
 .field {
   input,
   textarea,
-  .form__checkbox,
   .form__sity-wrap,
-  .modal__sity-wrap,
-  .modal__checkbox {
+  .modal__sity-wrap {
     &:disabled {
       opacity: 0.6;
       background-color: $color-default-white-opacity;

@@ -10,14 +10,14 @@
   background-color: $color-charcoal;
   mask-repeat: no-repeat;
   border: none;
-  cursor: pointer;
+  pointer-events: none;
   outline: none;
   padding: 0;
   background-size: contain;
   background-position: center center;
   transition: transform $trans-default;
 
-  @include focus {
+  &.is-active {
     transform: rotate(-180deg);
   }
 }
@@ -60,6 +60,16 @@
   &--active {
     color: $color-default-white;
     background-color: $color-cerulean-blue;
+
+    @include hover-focus {
+      color: $color-cerulean-blue;
+      background-color: $color-default-white;
+    }
+  }
+
+  @include hover-focus {
+    outline: none;
+    color: $color-cerulean-blue;
   }
 }
 
@@ -69,6 +79,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 16px 20px 16px 25px;
+  cursor: pointer;
 
   @include vp-1199 {
     padding-right: 20px;
@@ -80,4 +91,5 @@
   font-weight: 400;
   line-height: 14px;
   text-transform: capitalize;
+  pointer-events: none;
 }
