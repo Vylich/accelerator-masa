@@ -2632,6 +2632,7 @@ button,
   font-weight: 400;
   line-height: 12px;
   color: #484848;
+  cursor: pointer;
 }
 
 .modal__checkbox {
@@ -3412,7 +3413,7 @@ button,
   color: #ffffff;
   position: relative;
   z-index: 3;
-  padding-bottom: 60px;
+  padding-bottom: 60px !important;
 }
 
 .hero__content h2 {
@@ -3740,6 +3741,7 @@ button,
 }
 
 .menu__item a.focus-visible:focus {
+  outline: none;
   color: #ffffff;
   opacity: 1;
 }
@@ -4020,6 +4022,11 @@ button,
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   color: #ffffff;
   -webkit-column-gap: 52px;
   -moz-column-gap: 52px;
@@ -4077,6 +4084,8 @@ button,
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   row-gap: 15px;
+  width: 100%;
+  max-width: 478px;
 }
 
 .about__item span {
@@ -4085,7 +4094,6 @@ button,
   line-height: 30px;
   letter-spacing: 0.26px;
   text-transform: uppercase;
-  margin-right: 10px;
 }
 
 .about__item p {
@@ -5042,14 +5050,10 @@ span.modal__error {
   background-color: #316dc2;
 }
 
-.dropdown__item--active.focus-visible:focus {
-  color: #316dc2;
-  background-color: #ffffff;
-}
-
 .dropdown__item.focus-visible:focus {
   outline: none;
-  color: #316dc2;
+  color: #ffffff;
+  background-color: #316dc2;
 }
 
 .dropdown__text-wrap {
@@ -5186,6 +5190,10 @@ span.modal__error {
   line-height: 18px;
 }
 
+.reviews__info div p {
+  margin-top: 0;
+}
+
 .reviews__buttons {
   position: relative;
   display: -webkit-box;
@@ -5268,11 +5276,6 @@ span.modal__error {
 .accordion .accordion__item:last-child .accordion__header,
 .accordion .accordion__item:nth-last-child(2) .accordion__header {
   margin: -13px 0;
-}
-
-.accordion .accordion__item:last-child .accordion__header button,
-.accordion .accordion__item:nth-last-child(2) .accordion__header button {
-  top: 13px;
 }
 
 .accordion .accordion__item:nth-last-child(2) .accordion__header span {
@@ -5906,12 +5909,16 @@ span.modal__error {
   align-items: center;
 }
 
+.item-select__wrapper.focus-visible:focus {
+  outline: none;
+}
+
 .item-select__wrapper.focus-visible:focus span:first-child {
   opacity: 1;
   color: #ffffff;
 }
 
-.item-select__wrapper.focus-visible:focus span:last-child {
+.item-select__wrapper.focus-visible:focus span:last-child svg {
   -webkit-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   transform: rotate(-180deg);
@@ -6033,14 +6040,10 @@ span.modal__error {
   background-color: #316dc2;
 }
 
-.dropdown-modal__item--active.focus-visible:focus {
-  color: #316dc2;
-  background-color: #ffffff;
-}
-
 .dropdown-modal__item.focus-visible:focus {
   outline: none;
-  color: #316dc2;
+  color: #ffffff;
+  background-color: #316dc2;
 }
 
 .dropdown-modal__text-wrap {
@@ -6107,6 +6110,15 @@ span.modal__error {
   }
 */
 
+@media (max-width: 1439px) {
+  .about__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 1199px) {
   .container {
     padding: 0 45px;
@@ -6148,6 +6160,7 @@ span.modal__error {
 
   .hero__content {
     padding-right: 64px;
+    padding-bottom: 60px;
   }
 
   .hero__content h2 {
@@ -6334,12 +6347,12 @@ span.modal__error {
     -ms-flex-pack: start;
     justify-content: flex-start;
     row-gap: 0;
+    width: auto;
   }
 
   .about__item span {
     font-size: 20px;
     line-height: 22px;
-    margin-right: 0;
   }
 
   .about__item p {
@@ -6582,6 +6595,7 @@ span.modal__error {
 
   .reviews__avatar p {
     font-size: 20px;
+    margin-top: 0;
     margin-bottom: 3px;
   }
 
@@ -6615,11 +6629,6 @@ span.modal__error {
     gap: 10px;
   }
 
-  .accordion .accordion__item:last-child .accordion__header button,
-  .accordion .accordion__item:nth-last-child(2) .accordion__header button {
-    top: 5px;
-  }
-
   .accordion .accordion__item:last-child .accordion__header,
   .accordion .accordion__item:nth-last-child(2) .accordion__header {
     margin: -5px 0;
@@ -6632,11 +6641,6 @@ span.modal__error {
   .accordion .accordion__item:last-child,
   .accordion .accordion__item:nth-last-child(2) {
     padding: 29px 30px;
-  }
-
-  .accordion .accordion__item:last-child button,
-  .accordion .accordion__item:nth-last-child(2) button {
-    top: 0;
   }
 
   .accordion__item {
@@ -7139,13 +7143,13 @@ span.modal__error {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: start;
+    width: auto;
   }
 
   .about__item span {
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.16px;
-    margin-right: 0;
   }
 
   .about__item p {
@@ -7280,6 +7284,7 @@ span.modal__error {
   .programs__card {
     min-height: 400px;
     min-width: 290px;
+    aspect-ratio: 29/40;
     padding: 0 10px 18px;
   }
 
@@ -7508,11 +7513,6 @@ span.modal__error {
     margin-top: 34px;
   }
 
-  .accordion .accordion__item:last-child .accordion__header button,
-  .accordion .accordion__item:nth-last-child(2) .accordion__header button {
-    top: 27px;
-  }
-
   .accordion .accordion__item:last-child .accordion__header,
   .accordion .accordion__item:nth-last-child(2) .accordion__header {
     margin: 0;
@@ -7525,14 +7525,6 @@ span.modal__error {
   .accordion .accordion__item:last-child,
   .accordion .accordion__item:nth-last-child(2) {
     padding: 19px 15px;
-  }
-
-  .accordion .accordion__item:last-child button,
-  .accordion .accordion__item:nth-last-child(2) button {
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
   }
 
   .accordion__item {
@@ -7601,6 +7593,10 @@ span.modal__error {
     gap: 12px;
     margin-top: 27px;
     scrollbar-width: none;
+  }
+
+  .news__tabs::-webkit-scrollbar {
+    width: 0;
   }
 
   .news__btn {
@@ -7833,6 +7829,7 @@ span.modal__error {
   }
 
   .menu__item a:hover:not(.focus-visible) {
+    outline: none;
     color: #ffffff;
     opacity: 1;
   }
@@ -7976,12 +7973,16 @@ span.modal__error {
     color: #316dc2;
   }
 
+  .item-select__wrapper:hover:not(.focus-visible) {
+    outline: none;
+  }
+
   .item-select__wrapper:hover:not(.focus-visible) span:first-child {
     opacity: 1;
     color: #ffffff;
   }
 
-  .item-select__wrapper:hover:not(.focus-visible) span:last-child {
+  .item-select__wrapper:hover:not(.focus-visible) span:last-child svg {
     -webkit-transform: rotate(-180deg);
     -ms-transform: rotate(-180deg);
     transform: rotate(-180deg);

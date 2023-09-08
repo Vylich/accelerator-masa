@@ -39,6 +39,7 @@
 
   a {
     @include hover-focus {
+      outline: none;
       color: $color-default-white;
       opacity: 1;
     }

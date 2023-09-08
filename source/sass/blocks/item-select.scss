@@ -40,15 +40,18 @@
   align-items: center;
 
   @include hover-focus {
+    outline: none;
     span:first-child {
       opacity: 1;
       color: $color-default-white;
     }
 
     span:last-child {
-      transform: rotate(-180deg);
-      opacity: 1;
-      color: $color-default-white;
+      svg {
+        transform: rotate(-180deg);
+        opacity: 1;
+        color: $color-default-white;
+      }
     }
   }
 
