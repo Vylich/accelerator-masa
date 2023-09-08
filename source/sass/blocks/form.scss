@@ -239,6 +239,11 @@
     &+.form__checkbox {
       outline: none;
       border-color: $color-default-white;
+      background-color: $color-transparent;
+
+      &::after {
+        background-color: $color-default-white;
+      }
     }
   }
 }
@@ -257,7 +262,7 @@
     }
   }
 
-  @include hover-focus {
+  @include hover {
     background-color: $color-transparent;
 
     &::after {

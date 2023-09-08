@@ -5,6 +5,18 @@ const formNode = document.querySelector('.form__content form');
 const selectNode = document.querySelector('.dropdown__text');
 const modalFormNode = document.querySelector('.modal__content form');
 const modalSelectNode = document.querySelector('.dropdown-modal__text');
+const formButton = document.querySelector('.form__btn');
+const modalButton = document.querySelector('.modal__btn');
+
+const initValidate = () => {
+  formButton.addEventListener('click', () => {
+    formValidate();
+  });
+
+  modalButton.addEventListener('click', () => {
+    popupFormValidate();
+  });
+};
 
 const formValidate = () => {
   const pristine = new Pristine(formNode, {
@@ -65,4 +77,4 @@ const popupFormValidate = () => {
   });
 };
 
-export {formValidate, popupFormValidate};
+export {initValidate};

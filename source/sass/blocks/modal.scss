@@ -318,6 +318,11 @@
     &+.modal__checkbox {
       outline: none;
       border-color: $color-cerulean-blue;
+      background-color: $color-transparent;
+
+      &::after {
+        background-color: $color-cerulean-blue;
+      }
     }
   }
 }
@@ -336,7 +341,16 @@
     }
   }
 
-  @include hover-focus {
+  @include hover {
+    border-color: $color-cerulean-blue;
+    background-color: $color-transparent;
+
+    &::after {
+      background-color: $color-cerulean-blue;
+    }
+  }
+
+  @include focus {
     border-color: $color-cerulean-blue;
     background-color: $color-transparent;
 

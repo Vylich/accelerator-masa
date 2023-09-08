@@ -9,7 +9,7 @@ import {initNewsSlider} from './modules/init-news';
 import {initMenu} from './modules/menu';
 import {initDropdownModal} from './modules/dropdown';
 import {resetFocus} from './utils/reset-focus';
-import {formValidate, popupFormValidate} from './modules/form';
+import {initValidate} from './modules/form';
 import {onEventCalllback} from './modules/phone-mask.js';
 
 const phoneInputs = document.querySelectorAll('[data-phone-pattern]');
@@ -39,8 +39,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initNewsSlider();
   initMenu();
   initDropdownModal();
-  formValidate();
-  popupFormValidate();
+  initValidate();
 
   // Modules
   // ---------------------------------
