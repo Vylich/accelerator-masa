@@ -10,14 +10,47 @@
 
 .accordion .accordion__item:last-child .accordion__header,
 .accordion .accordion__item:nth-last-child(2) .accordion__header {
-  @include vp-1199 {
-    margin-top: 0;
-    margin-bottom: 0;
+  margin: -13px 0;
+
+  button {
+    top: 13px;
+
+    @include vp-1199 {
+      top: 5px;
+    }
+
+    @include vp-767 {
+      top: 27px;
+    }
   }
+
+  @include vp-1199 {
+    margin: -5px 0;
+  }
+
+  @include vp-767 {
+    margin: 0;
+  }
+}
+
+.accordion .accordion__item:nth-last-child(2) .accordion__header {
+  span {
+    padding-right: 376px;
+
+    @include vp-1199 {
+      padding-right: 168px;
+    }
+
+    @include vp-767 {
+      padding-right: 45px;
+    }
+  }
+
 }
 
 .accordion .accordion__item:last-child,
 .accordion .accordion__item:nth-last-child(2) {
+
   @include vp-1199 {
     padding: 29px 30px;
   }

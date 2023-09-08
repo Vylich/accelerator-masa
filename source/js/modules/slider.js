@@ -85,7 +85,7 @@ const initProgramsSlider = () => {
 
   const swiper = new Swiper(programsSliderNode, {
     speed: 300,
-    slidesPerView: 'auto',
+
     spaceBetween: 0,
     navigation: {
       nextEl: '.programs__btn-next',
@@ -93,9 +93,11 @@ const initProgramsSlider = () => {
     },
     breakpoints: {
       320: {
+        slidesPerView: 1,
         allowTouchMove: true,
       },
       768: {
+        slidesPerView: 2,
         allowTouchMove: true,
         spaceBetween: 30,
       },

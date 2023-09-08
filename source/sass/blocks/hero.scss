@@ -41,7 +41,7 @@
       font-size: 22px;
       line-height: 26px;
       border-radius: 0 16px 16px 0;
-      padding: 20px 14px 16px;
+      padding: 20px 14px 10px;
     }
   }
 
@@ -59,10 +59,11 @@
     }
 
     @include vp-767 {
+      margin: 0;
       font-size: 14px;
       line-height: 20px;
       background-color: $color-default-white;
-      padding: 0 14px 12px;
+      padding: 0 14px 11px;
       border-radius: 0 0 14px 0;
       position: relative;
       max-width: 261px;

@@ -20,15 +20,18 @@
     font-weight: 400;
     line-height: 51px;
     margin: 0;
+    margin-top: 3px;
 
     @include vp-1199 {
       font-size: 34px;
       line-height: 50px;
+      margin-top: 0;
     }
 
     @include vp-767 {
       font-size: 20px;
       line-height: 20px;
+      margin-top: 0;
     }
   }
 
@@ -131,16 +134,13 @@
   width: 100%;
   background-color: $color-cerulean-blue;
   border-radius: 20px;
-  padding: 70px 106px;
+  padding: 92px 106px 56px 126px;
   margin-top: 60px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   color: $color-default-white;
   column-gap: 52px;
   row-gap: 54px;
-  padding-top: 90px;
-  padding-left: 126px;
-  padding-bottom: 52px;
 
   @include vp-1199 {
     padding: 61px 40px 41px 60px;
@@ -239,7 +239,7 @@
 }
 
 .about__item {
-  padding: 30px 60px;
+  padding: 29px 60px;
   display: flex;
   border: 1px solid $color-default-white;
   border-radius: 16px;
@@ -252,6 +252,7 @@
     flex-direction: column;
     padding: 29px 42px 25px 29px;
     justify-content: flex-start;
+    row-gap: 0;
   }
 
   @include vp-767 {

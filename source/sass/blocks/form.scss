@@ -56,7 +56,6 @@
     font-weight: 400;
     line-height: 36px;
     margin: 0;
-    margin-bottom: 28px;
 
     @include vp-1199 {
       font-size: 28px;
@@ -87,12 +86,12 @@
     @include vp-767 {
       font-size: 14px;
       line-height: 20px;
-      margin-top: 15px;
+      margin-top: 17px;
     }
   }
 
   form {
-    margin-top: 16px;
+    margin-top: 18px;
 
     @include vp-1199 {
       margin-top: 31px;
@@ -166,7 +165,7 @@
     outline: none;
     border: 1px solid $color-default-white-opacity;
     border-radius: 8px;
-    height: 101px;
+    height: 99px;
     padding: 16px 25px;
     color: $color-default-white;
     font-size: 14px;

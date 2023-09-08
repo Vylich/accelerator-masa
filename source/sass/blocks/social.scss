@@ -1,6 +1,14 @@
 .social {
-  max-width: 148px;
+  min-width: 148px;
   flex-wrap: wrap;
+
+  @include vp-1199 {
+    min-width: 128px;
+  }
+
+  @include vp-767 {
+    min-width: 98px;
+  }
 
   svg {
     color: $color-default-white;

@@ -3831,8 +3831,6 @@ button,
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
-  margin-right: 20px;
-  margin-left: 20px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -3903,7 +3901,7 @@ button,
 }
 
 .social {
-  max-width: 148px;
+  min-width: 148px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -3959,6 +3957,7 @@ button,
   font-weight: 400;
   line-height: 51px;
   margin: 0;
+  margin-top: 3px;
 }
 
 .about__main p {
@@ -4010,7 +4009,7 @@ button,
   width: 100%;
   background-color: #316dc2;
   border-radius: 20px;
-  padding: 70px 106px;
+  padding: 92px 106px 56px 126px;
   margin-top: 60px;
   display: -ms-grid;
   display: grid;
@@ -4021,9 +4020,6 @@ button,
   -moz-column-gap: 52px;
   column-gap: 52px;
   row-gap: 54px;
-  padding-top: 90px;
-  padding-left: 126px;
-  padding-bottom: 52px;
 }
 
 .about__item:first-child p {
@@ -4063,7 +4059,7 @@ button,
 }
 
 .about__item {
-  padding: 30px 60px;
+  padding: 29px 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4702,7 +4698,6 @@ button,
   font-weight: 400;
   line-height: 36px;
   margin: 0;
-  margin-bottom: 28px;
 }
 
 .form__content p {
@@ -4715,7 +4710,7 @@ button,
 }
 
 .form__content form {
-  margin-top: 16px;
+  margin-top: 18px;
 }
 
 .form__fieldset {
@@ -4781,7 +4776,7 @@ button,
   outline: none;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
-  height: 101px;
+  height: 99px;
   padding: 16px 25px;
   color: #ffffff;
   font-size: 14px;
@@ -5067,6 +5062,7 @@ span.modal__error {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 16px 25px;
+  padding-right: 19px;
   cursor: pointer;
 }
 
@@ -5200,7 +5196,7 @@ span.modal__error {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 38px;
+  margin-top: 28px;
 }
 
 .reviews__line {
@@ -5265,6 +5261,20 @@ span.modal__error {
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 8px;
+}
+
+.accordion .accordion__item:last-child .accordion__header,
+.accordion .accordion__item:nth-last-child(2) .accordion__header {
+  margin: -13px 0;
+}
+
+.accordion .accordion__item:last-child .accordion__header button,
+.accordion .accordion__item:nth-last-child(2) .accordion__header button {
+  top: 13px;
+}
+
+.accordion .accordion__item:nth-last-child(2) .accordion__header span {
+  padding-right: 376px;
 }
 
 .accordion__item {
@@ -6226,6 +6236,10 @@ span.modal__error {
     padding-bottom: 1px;
   }
 
+  .social {
+    min-width: 128px;
+  }
+
   .about {
     margin-top: 100px;
   }
@@ -6233,6 +6247,7 @@ span.modal__error {
   .about__main h2 {
     font-size: 34px;
     line-height: 50px;
+    margin-top: 0;
   }
 
   .about__main p {
@@ -6316,6 +6331,7 @@ span.modal__error {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
+    row-gap: 0;
   }
 
   .about__item span {
@@ -6431,6 +6447,7 @@ span.modal__error {
     -ms-flex-pack: justify;
     justify-content: space-between;
     width: 100%;
+    margin-left: 0;
   }
 
   .contacts__list p {
@@ -6596,10 +6613,18 @@ span.modal__error {
     gap: 10px;
   }
 
+  .accordion .accordion__item:last-child .accordion__header button,
+  .accordion .accordion__item:nth-last-child(2) .accordion__header button {
+    top: 5px;
+  }
+
   .accordion .accordion__item:last-child .accordion__header,
   .accordion .accordion__item:nth-last-child(2) .accordion__header {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: -5px 0;
+  }
+
+  .accordion .accordion__item:nth-last-child(2) .accordion__header span {
+    padding-right: 168px;
   }
 
   .accordion .accordion__item:last-child,
@@ -6865,14 +6890,15 @@ span.modal__error {
     font-size: 22px;
     line-height: 26px;
     border-radius: 0 16px 16px 0;
-    padding: 20px 14px 16px;
+    padding: 20px 14px 10px;
   }
 
   .hero__content p {
+    margin: 0;
     font-size: 14px;
     line-height: 20px;
     background-color: #ffffff;
-    padding: 0 14px 12px;
+    padding: 0 14px 11px;
     border-radius: 0 0 14px 0;
     position: relative;
     max-width: 261px;
@@ -7030,6 +7056,10 @@ span.modal__error {
     line-height: 14px;
   }
 
+  .social {
+    min-width: 98px;
+  }
+
   .social svg {
     width: 12px;
     height: 12px;
@@ -7054,6 +7084,7 @@ span.modal__error {
   .about__main h2 {
     font-size: 20px;
     line-height: 20px;
+    margin-top: 0;
   }
 
   .about__main p {
@@ -7195,7 +7226,7 @@ span.modal__error {
   }
 
   .contacts__header {
-    padding-bottom: 23px;
+    padding-bottom: 21px;
   }
 
   .contacts__header h2 {
@@ -7245,9 +7276,9 @@ span.modal__error {
   }
 
   .programs__card {
-    height: 400px;
+    min-height: 400px;
     min-width: 290px;
-    padding: 271px 10px 18px;
+    padding: 0 10px 18px;
   }
 
   .programs__inner-wrapper div {
@@ -7312,7 +7343,7 @@ span.modal__error {
   .form__content p {
     font-size: 14px;
     line-height: 20px;
-    margin-top: 15px;
+    margin-top: 17px;
   }
 
   .form__content form {
@@ -7473,6 +7504,20 @@ span.modal__error {
 
   .questions__accordion {
     margin-top: 34px;
+  }
+
+  .accordion .accordion__item:last-child .accordion__header button,
+  .accordion .accordion__item:nth-last-child(2) .accordion__header button {
+    top: 27px;
+  }
+
+  .accordion .accordion__item:last-child .accordion__header,
+  .accordion .accordion__item:nth-last-child(2) .accordion__header {
+    margin: 0;
+  }
+
+  .accordion .accordion__item:nth-last-child(2) .accordion__header span {
+    padding-right: 45px;
   }
 
   .accordion .accordion__item:last-child,
