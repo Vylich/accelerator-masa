@@ -2651,6 +2651,11 @@ button,
 .modal__input-checkbox.focus-visible:focus + .modal__checkbox {
   outline: none;
   border-color: #316dc2;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.modal__input-checkbox.focus-visible:focus + .modal__checkbox::after {
+  background-color: #316dc2;
 }
 
 .modal__input-checkbox:checked + .modal__checkbox {
@@ -4821,6 +4826,11 @@ button,
 .form__input-checkbox.focus-visible:focus + .form__checkbox {
   outline: none;
   border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.form__input-checkbox.focus-visible:focus + .form__checkbox::after {
+  background-color: #ffffff;
 }
 
 .form__input-checkbox:checked + .form__checkbox {
@@ -4835,14 +4845,6 @@ button,
 }
 
 .form__input-checkbox:checked + .form__checkbox:disabled::after {
-  background-color: #ffffff;
-}
-
-.form__input-checkbox:checked + .form__checkbox.focus-visible:focus {
-  background-color: rgba(255, 255, 255, 0);
-}
-
-.form__input-checkbox:checked + .form__checkbox.focus-visible:focus::after {
   background-color: #ffffff;
 }
 
