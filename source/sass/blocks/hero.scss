@@ -9,7 +9,7 @@
   color: $color-default-white;
   position: relative;
   z-index: 3;
-  padding-bottom: 60px !important;
+  padding-bottom: 60px;
 
   @include vp-1199 {
     padding-right: 64px;
