@@ -5152,6 +5152,7 @@ span.modal__error {
   color: #316dc2;
   text-align: left;
   max-width: 89px;
+  margin-top: 0 !important;
 }
 
 .reviews__profile {
@@ -5183,15 +5184,11 @@ span.modal__error {
   text-transform: uppercase;
 }
 
-.reviews__info p {
+.reviews__info div p {
   margin: 0;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
-}
-
-.reviews__info div p {
-  margin-top: 0;
 }
 
 .reviews__buttons {
@@ -6604,7 +6601,7 @@ span.modal__error {
     gap: 26px;
   }
 
-  .reviews__info p {
+  .reviews__info div p {
     margin-top: 0;
   }
 
@@ -7460,6 +7457,7 @@ span.modal__error {
   }
 
   .reviews__avatar p {
+    margin-top: 0;
     font-size: 14px;
     line-height: 18px;
   }
@@ -7484,10 +7482,10 @@ span.modal__error {
     margin-bottom: 0;
   }
 
-  .reviews__info p {
+  .reviews__info div p {
     font-size: 12px;
     line-height: 14px;
-    margin-top: 1px;
+    margin-top: 3px;
   }
 
   .reviews__buttons {
