@@ -310,6 +310,7 @@
   @include vp-767 {
     margin-top: 30px;
     height: auto;
+    padding-top: 4px;
   }
 
   span:first-child {
@@ -321,7 +322,7 @@
       font-size: 12px;
       line-height: 12px;
       letter-spacing: 0.24px;
-      margin-right: 20px;
+      margin-right: 0;
     }
   }
 

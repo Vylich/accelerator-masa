@@ -7396,13 +7396,14 @@ span.modal__error {
   .form__btn {
     margin-top: 30px;
     height: auto;
+    padding-top: 4px;
   }
 
   .form__btn span:first-child {
     font-size: 12px;
     line-height: 12px;
     letter-spacing: 0.24px;
-    margin-right: 20px;
+    margin-right: 0;
   }
 
   .form__btn span:last-child {
