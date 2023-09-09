@@ -3413,7 +3413,7 @@ button,
   color: #ffffff;
   position: relative;
   z-index: 3;
-  padding-bottom: 60px !important;
+  padding-bottom: 60px;
 }
 
 .hero__content h2 {
@@ -6602,6 +6602,10 @@ span.modal__error {
   .reviews__info {
     margin-right: 1px;
     gap: 26px;
+  }
+
+  .reviews__info p {
+    margin-top: 0;
   }
 
   .reviews__buttons {
