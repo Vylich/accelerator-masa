@@ -98,6 +98,7 @@ const createNews = (arr) => {
         });
         break;
       case breakpointMobile.matches:
+        newsSliderWrapperNode.innerHTML = '';
         newsDataChunked = chunkArray(arr, 2);
 
         newsDataChunked.forEach((item) => {
