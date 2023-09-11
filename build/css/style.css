@@ -3747,12 +3747,17 @@ button,
 }
 
 .menu {
-  overflow: scroll;
+  overflow: auto;
   border: 1px solid #316dc2;
   border-radius: 16px;
   background-color: #316dc2;
   padding: 0 25px;
   margin-top: 4px;
+  scrollbar-width: none;
+}
+
+.menu::-webkit-scrollbar {
+  width: 0;
 }
 
 .menu a {
@@ -5540,6 +5545,7 @@ span.modal__error {
   margin-top: 40px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  padding: 0;
 }
 
 .news__btn {
@@ -6113,6 +6119,9 @@ span.modal__error {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
@@ -7588,18 +7597,20 @@ span.modal__error {
   .news__tabs {
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
-    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
     margin-right: -15px;
     gap: 12px;
     margin-top: 27px;
+    -ms-overflow-style: none;
     scrollbar-width: none;
   }
 
   .news__tabs::-webkit-scrollbar {
-    width: 0;
+    display: none;
   }
 
   .news__btn {

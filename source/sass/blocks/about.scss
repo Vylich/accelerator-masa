@@ -254,6 +254,7 @@
 
   @include vp-1439 {
     flex-direction: column;
+    justify-content: flex-start;
   }
 
   @include vp-1199 {

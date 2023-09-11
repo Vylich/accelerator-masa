@@ -47,12 +47,16 @@
 }
 
 .menu {
-  overflow: scroll;
+  overflow: auto;
   border: 1px solid $color-cerulean-blue;
   border-radius: 16px;
   background-color: $color-cerulean-blue;
   padding: 0 25px;
   margin-top: 4px;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 
   a {
     color: $color-default-white;
